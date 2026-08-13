@@ -21,6 +21,7 @@
 # 2. 検査して生成する
 node --test
 node tools/validate.mjs
+node tools/linkmap.mjs
 node tools/build.mjs
 # 3. 生成物を含めてコミットする
 git add -A
