@@ -42,7 +42,7 @@ export function toCsv(rows, columns) {
   return '﻿' + lines.join('\n') + '\n'
 }
 
-const CSV_COLUMNS = {
+export const CSV_COLUMNS = {
   'org_units.csv': ['id', 'name', 'level', 'parent_id', 'branch', 'legal_source', 'article', 'duty_count', 'note'],
   'duties.csv': ['id', 'unit_id', 'unit_name', 'seq', 'text', 'legal_source', 'article'],
   'amendments.csv': ['source', 'promulgated_on', 'enforced_on', 'recorded_on', 'number', 'kind'],
