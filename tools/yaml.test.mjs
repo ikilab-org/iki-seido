@@ -63,3 +63,10 @@ test('行頭コメントと空行を飛ばす', () => {
   assert.deepEqual(doc.meta, { era_base: 2018 })
 })
 
+test('引用符つきの日本語キーを持つマップを読む', () => {
+  // data/synonyms.yml が検索語（日本語）をキーに使うため、素の識別子
+  // （[A-Za-z_]始まり）以外に引用符つきキーも受け付ける。
+  const doc = parseYaml(['synonyms:', '  "ごみ": ["廃棄物", "ごみ"]', "  'リサイクル': ['リサイクル']"].join('\n'))
+  assert.deepEqual(doc.synonyms, { 'ごみ': ['廃棄物', 'ごみ'], 'リサイクル': ['リサイクル'] })
+})
+

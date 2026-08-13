@@ -120,7 +120,9 @@ function parseBlockScalar(lines, i, parentIndent, style) {
 
 // --- 構造 -------------------------------------------------------------------
 
-const KEY = /^([A-Za-z_][A-Za-z0-9_-]*)\s*:(?:\s+(.*))?$/
+// マップのキーは素の識別子（[A-Za-z_]始まり）か、引用符つき文字列。
+// data/synonyms.yml が日本語の検索語をキーに使うため、後者が要る。
+const KEY = /^(?:([A-Za-z_][A-Za-z0-9_-]*)|"([^"]*)"|'([^']*)')\s*:(?:\s+(.*))?$/
 
 function parseNode(lines, i, indent) {
   const j = skip(lines, i)
@@ -142,8 +144,8 @@ function parseMapping(lines, i, indent) {
 
     const m = l.content.match(KEY)
     if (!m) throw new Error(`${l.line}行目: キーとして解釈できません: ${l.content}`)
-    const key = m[1]
-    const rest = stripComment(m[2] ?? '')
+    const key = m[1] ?? m[2] ?? m[3]
+    const rest = stripComment(m[4] ?? '')
 
     if (/^[>|][-+]?$/.test(rest)) {
       const [v, n] = parseBlockScalar(lines, i + 1, indent, rest)
