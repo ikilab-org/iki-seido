@@ -101,9 +101,14 @@ gh api -X PUT repos/ikilab-org/iki-seido/pages -F https_enforced=true
 - **DNS の伝播に時間がかかること。** `dig +short seido.ikilab.org` が空、または古い値を返す間は
   数分〜30分待ってから再実行してください。DNS が引けないまま先の手順に進むとエラーになり、
   やり直しが必要になります
-- **`.nojekyll` がないと `tools/__fixtures__` が配信されないこと。** GitHub Pages は既定で Jekyll
-  ビルドを通し、`_` や `__` で始まるディレクトリを除外します。リポジトリ直下に `.nojekyll` が
-  あることを確認してください（`ls -la .nojekyll`）。無い場合はビルドを経由せず空ファイルとして追加します
+- **`.nojekyll` を外すと Markdown が生テキストのまま配信されなくなること。** GitHub Pages は
+  既定で Jekyll ビルドを通します。`.nojekyll` を置いている今の状態では `NOTICE.md`・
+  `DISCLAIMER.md` などの Markdown ファイルは生テキストとして配信され、ブラウザで開くと
+  レンダリングされずソースのまま表示されます（index.html から `NOTICE.md` へ直接リンクして
+  いないのはこのためです）。`_`・`__` で始まるディレクトリ（`tools/__fixtures__` 等）が Jekyll の
+  既定除外から外れる副次効果もありますが、そちらは配信される必要のないテスト用ディレクトリ
+  なので実害はありません。リポジトリ直下に `.nojekyll` があることを確認してください
+  （`ls -la .nojekyll`）。無い場合はビルドを経由せず空ファイルとして追加します
 - **`CNAME` を消すと独自ドメインの設定が外れること。** `git rm CNAME` や上書きコミットをすると、
   次のデプロイで GitHub Pages のカスタムドメイン設定がリセットされます。ドメインを変えたいとき以外は
   触らないでください
