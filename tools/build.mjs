@@ -25,10 +25,26 @@ export function replaceGenerated(html, body) {
   return html.slice(0, from + BEGIN.length) + '\n' + body + '\n' + html.slice(to)
 }
 
+/**
+ * JSON を <script> の中へ直に書くため、HTML パーサに先にタグを閉じられない
+ * ようにエスケープする。値に `</script>` が入るとそこでスクリプトが終わり、
+ * 残りが本文として描画される。`<!--` も同じ理由で潰す。現行データに該当は
+ * ないが、v0.2 で例規HTMLから条文を取り込むようになると現実に入りうる。
+ * U+2028/U+2029 は JSON では素通りするのに JavaScript では行終端子なので、
+ * 文字列リテラルの途中で改行が入ったのと同じ壊れ方をする。
+ */
+function embedJson(value) {
+  return JSON.stringify(value, null, 2)
+    .replace(/</g, '\\u003c')
+    .replace(/>/g, '\\u003e')
+    .replace(/\u2028/g, '\\u2028')
+    .replace(/\u2029/g, '\\u2029')
+}
+
 /** [[名前, 値]] を const の並びにする。値が文字列ならコードとしてそのまま埋める */
 export function renderBlock(entries) {
   return entries
-    .map(([name, value]) => (typeof value === 'string' ? value : `const ${name} = ${JSON.stringify(value, null, 2)}`))
+    .map(([name, value]) => (typeof value === 'string' ? value : `const ${name} = ${embedJson(value)}`))
     .join('\n')
 }
 

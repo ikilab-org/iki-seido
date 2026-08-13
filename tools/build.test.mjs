@@ -42,3 +42,21 @@ test('renderBlock は文字列の値をそのまま埋める', () => {
   assert.match(out, /const A = \[\n {2}1,\n {2}2\n\]/)
   assert.match(out, /^function f\(\) \{\}$/m)
 })
+
+test('renderBlock は </script> をスクリプトの外に漏らさない', () => {
+  const raw = '第1条 <b>あ</b> </script><img onerror=x>'
+  const out = renderBlock([['A', { text: raw }]])
+  // < と > の両方を潰していること。片方だけだと </script> は崩れても
+  // <img onerror=...> のような単独タグがそのまま残る
+  assert.equal(out.includes('<'), false)
+  assert.equal(out.includes('>'), false)
+  // エスケープしても値としては元のまま読み戻せる
+  assert.equal(JSON.parse(out.slice(out.indexOf('{'))).text, raw)
+})
+
+test('renderBlock は JS の行終端子になる不可視文字を潰す', () => {
+  const raw = '行1\u2028行2\u2029行3'
+  const out = renderBlock([['A', { text: raw }]])
+  assert.equal(out.includes('\u2028') || out.includes('\u2029'), false)
+  assert.equal(JSON.parse(out.slice(out.indexOf('{'))).text, raw)
+})
