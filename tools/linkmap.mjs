@@ -6,6 +6,11 @@
  * テストも通ってしまう。目視以外に気づく手段がないので機械で止める。
  * 外部URL（http/https）は tools/linkcheck.mjs の担当なので見ない。
  *
+ * <script> の中身は検査しない。ビューの描画コードが文字列連結で href を
+ * 組み立てており（例: '<a href="' + s.url + '"'）、静的に見ると
+ * 「' + s.url + '」のような実在しないリンクを拾ってしまうため。
+ * 裏を返すと、JS が動的に作る内部リンクはこの検査の網にかからない。
+ *
  * 使い方: node tools/linkmap.mjs
  */
 import { existsSync, readFileSync, readdirSync, statSync } from 'node:fs'
@@ -15,8 +20,8 @@ import path from 'node:path'
 const SKIP_DIRS = new Set(['.git', 'node_modules', '.github', 'docs'])
 
 export function collectLinks(html) {
-  // Remove script tags to avoid matching href attributes in JavaScript code
-  const cleaned = html.replace(/<script[^>]*>.*?<\/script>/gs, '')
+  // 冒頭の注記のとおり、まず <script> を落としてから href を拾う
+  const cleaned = html.replace(/<script[^>]*>.*?<\/script>/gis, '')
   const out = []
   for (const m of cleaned.matchAll(/href="([^"]+)"/g)) {
     const href = m[1]
