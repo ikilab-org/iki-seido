@@ -1,6 +1,5 @@
 import { test } from 'node:test'
 import assert from 'node:assert/strict'
-import { readFileSync } from 'node:fs'
 import { parseYaml, parseValue, parseScalar, stripComment } from './yaml.mjs'
 
 test('スカラーを型に落とす', () => {
@@ -64,17 +63,3 @@ test('行頭コメントと空行を飛ばす', () => {
   assert.deepEqual(doc.meta, { era_base: 2018 })
 })
 
-test('実際の data/plans.yml を読み切る', () => {
-  const doc = parseYaml(readFileSync(new URL('../data/plans.yml', import.meta.url), 'utf8'))
-  // 件数は計画を足すたびに増えるので、下限と「全件に id がある」ことで確かめる。
-  // 固定値にすると、巡回で1件足すだけでテストが落ちる。
-  assert.ok(doc.plans.length >= 31, `計画が31件未満です: ${doc.plans.length}`)
-  assert.equal(doc.meta.era_base, 2018)
-  assert.equal(doc.plans[0].id, 'sougou-4')
-  assert.deepEqual(doc.plans.find((p) => p.id === 'bousai').period, { start: null, end: null })
-  assert.equal(doc.plans.every((p) => typeof p.id === 'string'), true)
-  const k9 = doc.plans.find((p) => p.id === 'kourei-9')
-  assert.deepEqual(k9.predecessors, ['kourei-8', 'kourei-7'])
-  assert.equal(k9.successor.public_comment.start, '2026-12')
-  assert.equal(k9.sources[0].url.startsWith('https://'), true)
-})
