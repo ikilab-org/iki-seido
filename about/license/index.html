@@ -11,19 +11,21 @@
   --page:#f9f9f7; --surface:#fcfcfb; --ink:#0b0b0b; --ink2:#52514e; --muted:#898781;
   --grid:#e1e0d9; --axis:#c3c2b7; --ring:rgba(11,11,11,0.10); --wash:rgba(11,11,11,0.035);
   --good:#0ca30c; --goodtx:#006300; --crit:#d03b3b; --warn:#fab219;
+  /* 強調色。サイト全体で条例に割り当てている青に合わせる（soshiki の --jorei と同値） */
+  --c1:#2a78d6;
 }
 :root[data-theme="dark"]{
   color-scheme: dark;
   --page:#0d0d0d; --surface:#1a1a19; --ink:#fff; --ink2:#c3c2b7; --muted:#898781;
   --grid:#2c2c2a; --axis:#383835; --ring:rgba(255,255,255,0.10); --wash:rgba(255,255,255,0.05);
-  --goodtx:#0ca30c;
+  --goodtx:#0ca30c; --c1:#3987e5;
 }
 @media (prefers-color-scheme: dark){
   :root:not([data-theme="light"]){
     color-scheme: dark;
     --page:#0d0d0d; --surface:#1a1a19; --ink:#fff; --ink2:#c3c2b7; --muted:#898781;
     --grid:#2c2c2a; --axis:#383835; --ring:rgba(255,255,255,0.10); --wash:rgba(255,255,255,0.05);
-    --goodtx:#0ca30c;
+    --goodtx:#0ca30c; --c1:#3987e5;
   }
 }
 *{box-sizing:border-box}
