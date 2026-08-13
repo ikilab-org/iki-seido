@@ -103,3 +103,29 @@ test('件数が固定値から動いたら error にする', () => {
   input.data.organization = input.data.organization.slice(1)
   assert.ok(errors(validate(input)).some((f) => /organization/.test(f.message)))
 })
+
+test('暦として存在しない日付を error にする', () => {
+  const input = load()
+  input.data.amendments = input.data.amendments.map((a, i) => (i === 0 ? { ...a, promulgated_on: '2026-02-30' } : a))
+  assert.ok(errors(validate(input)).some((f) => /2026-02-30/.test(f.message)))
+})
+
+test('うるう年の2月29日は通す', () => {
+  const input = load()
+  input.data.amendments = input.data.amendments.map((a, i) => (i === 0 ? { ...a, promulgated_on: '2024-02-29' } : a))
+  assert.deepEqual(errors(validate(input)), [])
+})
+
+test('未知の kind を error にする', () => {
+  const input = load()
+  input.data.amendments = input.data.amendments.map((a, i) => (i === 0 ? { ...a, kind: '廃止' } : a))
+  assert.ok(errors(validate(input)).some((f) => /kind/.test(f.message)))
+})
+
+test('article が空欄なら todo: の有無によらず error にする', () => {
+  const input = load()
+  input.data.organization = input.data.organization.map((u) => (u.id === 'u001' ? { ...u, article: '' } : u))
+  const f = validate(input)
+  assert.ok(errors(f).some((x) => x.id === 'u001' && /article/.test(x.message)))
+  assert.equal(warns(f).filter((x) => x.id === 'u001').length, 0)
+})

@@ -65,7 +65,8 @@ export function validate({ data, syn, scenarios, datapackage, fileExists = (p) =
     for (const [field, allowed] of [['level', ENUM.level], ['legal_source', ENUM.legal_source], ['branch', ENUM.branch]]) {
       if (!allowed.includes(u[field])) add('error', u.id, `${field} が値域外です: ${u[field]}`)
     }
-    if (!u.article) add(isTodo(u.article) ? 'warn' : 'error', u.id, 'article がありません')
+    // 空欄は無条件に error。todo: は非空の文字列なので、ここには来ない
+    if (!u.article) add('error', u.id, 'article がありません')
     else if (isTodo(u.article)) add('warn', u.id, `article が未確定です（${u.article}）`)
   }
   for (const u of units) {
@@ -86,6 +87,7 @@ export function validate({ data, syn, scenarios, datapackage, fileExists = (p) =
   const dutiesOf = new Map()
   const dutyIds = new Set()
   for (const d of duties) {
+    if (!d.id) { add('error', '(id なし)', 'id がありません'); continue }
     if (!/^d\d{4}$/.test(d.id)) add('error', d.id, 'id は d0000 形式です')
     if (dutyIds.has(d.id)) add('error', d.id, 'id が重複しています')
     dutyIds.add(d.id)
