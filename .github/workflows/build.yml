@@ -1,0 +1,42 @@
+name: 生成漏れとデータの検査
+
+on:
+  push:
+    paths:
+      - 'data/**'
+      - 'tools/**'
+      - 'index.html'          # ルート。*/index.html では一致しない
+      - '*/index.html'        # soshiki/ madoguchi/ ugoki/
+      - 'about/**/index.html'
+      - '.github/workflows/build.yml'
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      # 依存のインストールはしない。ツールは外部依存なしで動く
+      - name: 単体テスト
+        run: node --test
+
+      - name: データの検査
+        run: node tools/validate.mjs --fail-on-error
+
+      - name: 内部リンクの検査
+        run: node tools/linkmap.mjs
+
+      - name: 生成
+        run: node tools/build.mjs
+
+      - name: 生成漏れがないこと
+        run: git diff --exit-code

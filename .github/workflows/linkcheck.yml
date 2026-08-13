@@ -1,0 +1,65 @@
+name: 例規URLの死活チェック
+
+on:
+  schedule:
+    - cron: '0 21 * * 0'   # 毎週月曜 6:00 JST（UTC 日曜 21:00）
+  workflow_dispatch:
+  push:
+    paths:
+      - 'tools/linkcheck.mjs'
+      - '.github/workflows/linkcheck.yml'
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  linkcheck:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      # --fail-on-dead は付けない。失効時にジョブを落とすのではなく、
+      # 次のステップで Issue を立てて知らせる。
+      - name: 死活の確認
+        id: check
+        run: |
+          node tools/linkcheck.mjs --json > result.json
+          node -e "
+            const r = JSON.parse(require('fs').readFileSync('result.json', 'utf8'));
+            console.log('dead=' + r.dead);
+          " >> "$GITHUB_OUTPUT"
+
+      - name: 失効があれば Issue を立てる
+        if: steps.check.outputs.dead != '0'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs')
+            const { checked, dead, results } = JSON.parse(fs.readFileSync('result.json', 'utf8'))
+            const deadLines = results
+              .filter((r) => r.dead)
+              .map((r) => {
+                const status = r.status ?? 'エラー'
+                const detail = r.error ? `: ${r.error}` : `, ${r.bytes} バイト`
+                return `- ${r.name}\n  ${r.url}\n  status=${status}${detail}`
+              })
+            const body = [
+              `例規ページの死活チェックで失効を検知しました（${checked} 件中 ${dead} 件）。`,
+              '',
+              ...deadLines,
+              '',
+              'URLの移設なら data/ の出典と tools/view-model.mjs の SOURCES を、',
+              'ページ構造の変更なら scripts/parse_reiki.py の想定を確認してください。',
+            ].join('\n')
+            await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: `例規ページの失効を検知（${new Date().toISOString().slice(0, 10)}）`,
+              body,
+              labels: ['linkcheck'],
+            })
