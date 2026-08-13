@@ -30,7 +30,7 @@ IKILAB のシビックテック・ポートフォリオ(iki-gikai / iki-watch)�
 - [x] iki-keikaku(計画マップ)との名寄せ検証 ─ plans.yml の所管課32計画分(共管の「/」区切り含む)が org_units と**全件一致**することを確認済み(2026-08-12)
 - [ ] 欠損の完全収録: 支所の窓口業務(約69号)・事務所(約20号)・会計課・教委規則の条番号
 - [ ] `parse_reiki.py` の本丸実装 ─ 規則第4条の「課見出し→班見出し→号列挙」入れ子パース。移行判定は現行データセットとの照合(96/597/57 一致)
-- [ ] GitHubリポジトリ公開: `ikilab-org/iki-seido`。**ライセンス・リポジトリ規約はiki-keikakuを踏襲** ─ データ=CC BY 4.0/コード=MIT(CC0は「出所が辿れなくなる」というiki-keikakuの検討理由により不採用)。DISCLAIMER・NOTICE・CONTRIBUTING・CHANGELOG・Issueテンプレート・`todo:`許容バリデーション(validate.mjs方式)も同雛形で
+- [x] GitHubリポジトリ公開: `ikilab-org/iki-seido`。**ライセンス・リポジトリ規約はiki-keikakuを踏襲** ─ データ=CC BY 4.0/コード=MIT(CC0は「出所が辿れなくなる」というiki-keikakuの検討理由により不採用)。DISCLAIMER・NOTICE・CONTRIBUTING・CHANGELOG・Issueテンプレート・`todo:`許容バリデーション(validate.mjs方式)も同雛形で
 - [ ] iki-watch に監視対象を登録: 組織3例規+職員定数条例
 - [ ] **令和8年3月19日条例第4号の正体確認**(沿革に記載があるのに附則が本文ページに見当たらない。議会の議案資料か市への確認で内容を特定 ─ 最初のウォッチ実案件)
 
@@ -38,7 +38,7 @@ IKILAB のシビックテック・ポートフォリオ(iki-gikai / iki-watch)�
 
 **ゴール: seido.ikilab.orgとして世に出し、使われ方から学ぶ。**
 
-- [ ] 静的サイト公開(GitHub Pages+CNAME。iki-keikakuのSETUP.md手順を踏襲し、ikilab-org配下で運用を一本化。サブドメインは seido.ikilab.org で確定)
+- [x] 静的サイト公開(GitHub Pages+CNAME。iki-keikakuのSETUP.md手順を踏襲し、ikilab-org配下で運用を一本化。サブドメインは seido.ikilab.org で確定)
 - [ ] B検索をTursoハイブリッド検索(FTS5+ベクトル)へ載せ替え ─ iki-gikaiの技術資産を流用し、「田舎暮らしに興味がある」のような曖昧文も拾えるように
 - [ ] 課・班に連絡先と公式ページURLを付与(市サイト「組織から探す」と突合。例規に無い情報は出典を分けて明示)
 - [ ] ゼロヒットクエリの収集を開始 ─ **市民の言葉と条文の言葉のギャップこそ最大の資産**。同義語辞書を実利用から育てる
@@ -84,6 +84,15 @@ IKILAB のシビックテック・ポートフォリオ(iki-gikai / iki-watch)�
 ---
 
 ## 改訂履歴
+
+### 2026-08-13
+
+- **リポジトリ整備を実施し、`ikilab-org/iki-seido` を公開**。v0.2「GitHubリポジトリ公開」と v0.3「静的サイト公開」を消化した(DNS の CNAME レコード追加のみ残)
+- あわせて、当初 v0.2 の範囲になかった**データ源の反転**を実施。設計原則(1)「単一のデータ源」は文書上の方針にとどまり、実態は条文データが3本のモックHTMLに埋め込まれ `data/` がそこから生成される逆向きだった。`data/iki-seido-org.json` を唯一の正とし、ビューのデータ節と CSV を `tools/build.mjs` の生成物に変えた。移行の正しさは、移行前に凍結したスナップショットとの照合で確認している
+- URL をディレクトリ方式に変更(`soshiki.html` → `soshiki/`)
+- 条文由来でない同義語辞書71語とライフイベント8件を `data/synonyms.yml`・`data/scenarios.yml` に分離(権利関係が条文と異なるため出典を分ける)
+- 整備の過程で見つかったデータの誤りを2件修正。`datapackage.json` の `resource.path` が descriptor からの相対解決で `data/data/…` を指しており公開しても読み込めない状態だった。`quality_notes` が会計課を「概要のみ」としていたが実際は未収録だった
+- 検査とCIを整備: データ検査・内部リンク検査・例規URLの週次死活確認・生成漏れ検出
 
 ### 2026-08-12 (5)
 - プロジェクト名を **iki-seido** に確定(市民目線の命名検討でseido>kitei>reiki>kisokuの順位。理由: 正確さを損なわず、組織+規則という主題を両方覆い、市民語として通る)。サブドメインは seido.ikilab.org、データセットも iki-seido-org.json に改名。姉妹プロジェクトの iki-jigyou・iki-keiyaku(公告監視はiki-watchに分担)も同時確定
