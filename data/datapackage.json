@@ -1,0 +1,87 @@
+{
+  "name": "iki-city-administrative-organization",
+  "title": "壱岐市 行政組織データセット(例規由来)",
+  "version": "0.1.0",
+  "description": "壱岐市の行政組織条例・行政組織規則・教育委員会事務局組織規則の条文から抽出した組織構造(部・課・班)、分掌事務、改正沿革の機械可読データ。2026-08-11時点の例規ページに基づく。",
+  "homepage": "https://ikilab.org",
+  "licenses": [
+    {
+      "name": "CC-BY-4.0",
+      "title": "CC BY 4.0 (整理部分。コードはMIT。iki-keikakuと同方針)",
+      "path": "https://creativecommons.org/licenses/by/4.0/deed.ja"
+    }
+  ],
+  "sources": [
+    { "title": "壱岐市行政組織条例", "path": "https://www.city.iki.nagasaki.jp/section/reiki/reiki_honbun/r014RG00000958.html" },
+    { "title": "壱岐市行政組織規則", "path": "https://www.city.iki.nagasaki.jp/section/reiki/reiki_honbun/r014RG00000018.html" },
+    { "title": "壱岐市教育委員会事務局組織規則", "path": "https://www.city.iki.nagasaki.jp/section/reiki/reiki_honbun/r014RG00000190.html" }
+  ],
+  "resources": [
+    {
+      "name": "org_units",
+      "path": "data/org_units.csv",
+      "format": "csv",
+      "encoding": "utf-8",
+      "schema": {
+        "fields": [
+          { "name": "id", "type": "string", "constraints": { "required": true, "unique": true } },
+          { "name": "name", "type": "string", "constraints": { "required": true } },
+          { "name": "level", "type": "string", "constraints": { "enum": ["部", "課", "班", "室", "出先機関"] } },
+          { "name": "parent_id", "type": "string" },
+          { "name": "branch", "type": "string" },
+          { "name": "legal_source", "type": "string", "constraints": { "enum": ["jorei", "kisoku", "kyoiku"] } },
+          { "name": "article", "type": "string" },
+          { "name": "duty_count", "type": "integer" },
+          { "name": "note", "type": "string" }
+        ],
+        "primaryKey": "id",
+        "foreignKeys": [
+          { "fields": "parent_id", "reference": { "resource": "org_units", "fields": "id" } }
+        ]
+      }
+    },
+    {
+      "name": "duties",
+      "path": "data/duties.csv",
+      "format": "csv",
+      "encoding": "utf-8",
+      "schema": {
+        "fields": [
+          { "name": "id", "type": "string", "constraints": { "required": true, "unique": true } },
+          { "name": "unit_id", "type": "string", "constraints": { "required": true } },
+          { "name": "unit_name", "type": "string" },
+          { "name": "seq", "type": "integer" },
+          { "name": "text", "type": "string", "constraints": { "required": true } },
+          { "name": "legal_source", "type": "string", "constraints": { "enum": ["jorei", "kisoku", "kyoiku"] } },
+          { "name": "article", "type": "string" }
+        ],
+        "primaryKey": "id",
+        "foreignKeys": [
+          { "fields": "unit_id", "reference": { "resource": "org_units", "fields": "id" } }
+        ]
+      }
+    },
+    {
+      "name": "amendments",
+      "path": "data/amendments.csv",
+      "format": "csv",
+      "encoding": "utf-8",
+      "schema": {
+        "fields": [
+          { "name": "source", "type": "string", "constraints": { "enum": ["jorei", "kisoku", "kyoiku"] } },
+          { "name": "promulgated_on", "type": "date" },
+          { "name": "enforced_on", "type": "date" },
+          { "name": "recorded_on", "type": "date" },
+          { "name": "number", "type": "string" },
+          { "name": "kind", "type": "string" }
+        ]
+      }
+    },
+    {
+      "name": "full_dataset",
+      "path": "data/iki-seido-org.json",
+      "format": "json",
+      "encoding": "utf-8"
+    }
+  ]
+}

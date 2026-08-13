@@ -1,0 +1,6819 @@
+{
+  "name": "iki-city-administrative-organization",
+  "title": "壱岐市 行政組織データセット(例規由来)",
+  "version": "0.1.0",
+  "as_of": "2026-08-11",
+  "license_note": "条例・規則の本文は著作権法第13条により権利の目的とならない。データセットとしての整理部分はCC BY 4.0、コードはMIT(iki-keikakuと同方針: CC0は出所が辿れなくなるため不採用)。",
+  "sources": [
+    {
+      "id": "jorei",
+      "name": "壱岐市行政組織条例",
+      "url": "https://www.city.iki.nagasaki.jp/section/reiki/reiki_honbun/r014RG00000958.html",
+      "era": "平成23年条例第1号(令和7年6月1日施行)"
+    },
+    {
+      "id": "kisoku",
+      "name": "壱岐市行政組織規則",
+      "url": "https://www.city.iki.nagasaki.jp/section/reiki/reiki_honbun/r014RG00000018.html",
+      "era": "平成16年規則第2号(令和7年6月1日施行)"
+    },
+    {
+      "id": "kyoiku",
+      "name": "壱岐市教育委員会事務局組織規則",
+      "url": "https://www.city.iki.nagasaki.jp/section/reiki/reiki_honbun/r014RG00000190.html",
+      "era": "平成16年教育委員会規則第5号(平成31年4月1日施行)"
+    }
+  ],
+  "quality_notes": [
+    "支所・事務所・会計課の分掌事務は概要のみ(原文は多数の号を列挙)",
+    "教育委員会規則の分掌事務の条番号は未確定(第2条=内部組織のみ確認済み)",
+    "改正沿革のrecorded_onは例規ページ沿革表記に基づき公布日と施行日が混在している可能性がある",
+    "令和8年3月19日条例第4号は沿革に記載があるが附則が本文ページに見当たらず内容未確認"
+  ],
+  "organization": [
+    {
+      "id": "u001",
+      "name": "総務部",
+      "level": "部",
+      "parent_id": null,
+      "branch": "市長部局 ─ 本庁(6部)",
+      "legal_source": "jorei",
+      "article": "条例第1条・第2条",
+      "note": "部の設置と大分掌は条例、部内の課・班は規則第3条・第4条が定める。",
+      "duty_count": 16
+    },
+    {
+      "id": "u002",
+      "name": "総務課",
+      "level": "課",
+      "parent_id": "u001",
+      "branch": "市長部局 ─ 本庁(6部)",
+      "legal_source": "kisoku",
+      "article": "規則第3条",
+      "note": null,
+      "duty_count": 0
+    },
+    {
+      "id": "u003",
+      "name": "総務班",
+      "level": "班",
+      "parent_id": "u002",
+      "branch": "市長部局 ─ 本庁(6部)",
+      "legal_source": "kisoku",
+      "article": "規則第4条",
+      "note": null,
+      "duty_count": 42
+    },
+    {
+      "id": "u004",
+      "name": "職員班",
+      "level": "班",
+      "parent_id": "u002",
+      "branch": "市長部局 ─ 本庁(6部)",
+      "legal_source": "kisoku",
+      "article": "規則第4条",
+      "note": null,
+      "duty_count": 6
+    },
+    {
+      "id": "u005",
+      "name": "危機管理班",
+      "level": "班",
+      "parent_id": "u002",
+      "branch": "市長部局 ─ 本庁(6部)",
+      "legal_source": "kisoku",
+      "article": "規則第4条",
+      "note": null,
+      "duty_count": 10
+    },
+    {
+      "id": "u006",
+      "name": "財政課",
+      "level": "課",
+      "parent_id": "u001",
+      "branch": "市長部局 ─ 本庁(6部)",
+      "legal_source": "kisoku",
+      "article": "規則第3条",
+      "note": null,
+      "duty_count": 0
+    },
+    {
+      "id": "u007",
+      "name": "財政班",
+      "level": "班",
+      "parent_id": "u006",
+      "branch": "市長部局 ─ 本庁(6部)",
+      "legal_source": "kisoku",
+      "article": "規則第4条",
+      "note": null,
+      "duty_count": 7
+    },
+    {
+      "id": "u008",
+      "name": "契約管財班",
+      "level": "班",
+      "parent_id": "u006",
+      "branch": "市長部局 ─ 本庁(6部)",
+      "legal_source": "kisoku",
+      "article": "規則第4条",
+      "note": null,
+      "duty_count": 11
+    },
+    {
+      "id": "u009",
+      "name": "一緒に推進課",
+      "level": "課",
+      "parent_id": "u001",
+      "branch": "市長部局 ─ 本庁(6部)",
+      "legal_source": "kisoku",
+      "article": "規則第3条",
+      "note": "共創を掲げるユニークな課名。SDGs・広報・情報化を束ねる。",
+      "duty_count": 0
+    },
+    {
+      "id": "u010",
+      "name": "共創推進班",
+      "level": "班",
+      "parent_id": "u009",
+      "branch": "市長部局 ─ 本庁(6部)",
+      "legal_source": "kisoku",
+      "article": "規則第4条",
+      "note": null,
+      "duty_count": 11
+    },
+    {
+      "id": "u011",
+      "name": "広報戦略班",
+      "level": "班",
+      "parent_id": "u009",
+      "branch": "市長部局 ─ 本庁(6部)",
+      "legal_source": "kisoku",
+      "article": "規則第4条",
+      "note": null,
+      "duty_count": 5
+    },
+    {
+      "id": "u012",
+      "name": "情報管理班",
+      "level": "班",
+      "parent_id": "u009",
+      "branch": "市長部局 ─ 本庁(6部)",
+      "legal_source": "kisoku",
+      "article": "規則第4条",
+      "note": null,
+      "duty_count": 5
+    },
+    {
+      "id": "u013",
+      "name": "地域振興部",
+      "level": "部",
+      "parent_id": null,
+      "branch": "市長部局 ─ 本庁(6部)",
+      "legal_source": "jorei",
+      "article": "条例第1条・第2条",
+      "note": null,
+      "duty_count": 10
+    },
+    {
+      "id": "u014",
+      "name": "地域共創課",
+      "level": "課",
+      "parent_id": "u013",
+      "branch": "市長部局 ─ 本庁(6部)",
+      "legal_source": "kisoku",
+      "article": "規則第3条",
+      "note": null,
+      "duty_count": 0
+    },
+    {
+      "id": "u015",
+      "name": "企画市民協働班",
+      "level": "班",
+      "parent_id": "u014",
+      "branch": "市長部局 ─ 本庁(6部)",
+      "legal_source": "kisoku",
+      "article": "規則第4条",
+      "note": null,
+      "duty_count": 17
+    },
+    {
+      "id": "u016",
+      "name": "人口対策班",
+      "level": "班",
+      "parent_id": "u014",
+      "branch": "市長部局 ─ 本庁(6部)",
+      "legal_source": "kisoku",
+      "article": "規則第4条",
+      "note": null,
+      "duty_count": 7
+    },
+    {
+      "id": "u017",
+      "name": "観光課",
+      "level": "課",
+      "parent_id": "u013",
+      "branch": "市長部局 ─ 本庁(6部)",
+      "legal_source": "kisoku",
+      "article": "規則第3条",
+      "note": null,
+      "duty_count": 0
+    },
+    {
+      "id": "u018",
+      "name": "観光しまづくり班",
+      "level": "班",
+      "parent_id": "u017",
+      "branch": "市長部局 ─ 本庁(6部)",
+      "legal_source": "kisoku",
+      "article": "規則第4条",
+      "note": null,
+      "duty_count": 13
+    },
+    {
+      "id": "u019",
+      "name": "文化スポーツ振興課",
+      "level": "課",
+      "parent_id": "u013",
+      "branch": "市長部局 ─ 本庁(6部)",
+      "legal_source": "kisoku",
+      "article": "規則第3条",
+      "note": null,
+      "duty_count": 0
+    },
+    {
+      "id": "u020",
+      "name": "文化振興班",
+      "level": "班",
+      "parent_id": "u019",
+      "branch": "市長部局 ─ 本庁(6部)",
+      "legal_source": "kisoku",
+      "article": "規則第4条",
+      "note": null,
+      "duty_count": 7
+    },
+    {
+      "id": "u021",
+      "name": "スポーツ振興班",
+      "level": "班",
+      "parent_id": "u019",
+      "branch": "市長部局 ─ 本庁(6部)",
+      "legal_source": "kisoku",
+      "article": "規則第4条",
+      "note": null,
+      "duty_count": 10
+    },
+    {
+      "id": "u022",
+      "name": "文化財班",
+      "level": "班",
+      "parent_id": "u019",
+      "branch": "市長部局 ─ 本庁(6部)",
+      "legal_source": "kisoku",
+      "article": "規則第4条",
+      "note": null,
+      "duty_count": 7
+    },
+    {
+      "id": "u023",
+      "name": "市民部",
+      "level": "部",
+      "parent_id": null,
+      "branch": "市長部局 ─ 本庁(6部)",
+      "legal_source": "jorei",
+      "article": "条例第1条・第2条",
+      "note": null,
+      "duty_count": 5
+    },
+    {
+      "id": "u024",
+      "name": "市民福祉課",
+      "level": "課",
+      "parent_id": "u023",
+      "branch": "市長部局 ─ 本庁(6部)",
+      "legal_source": "kisoku",
+      "article": "規則第3条",
+      "note": null,
+      "duty_count": 0
+    },
+    {
+      "id": "u025",
+      "name": "市民班",
+      "level": "班",
+      "parent_id": "u024",
+      "branch": "市長部局 ─ 本庁(6部)",
+      "legal_source": "kisoku",
+      "article": "規則第4条",
+      "note": null,
+      "duty_count": 16
+    },
+    {
+      "id": "u026",
+      "name": "地域福祉班",
+      "level": "班",
+      "parent_id": "u024",
+      "branch": "市長部局 ─ 本庁(6部)",
+      "legal_source": "kisoku",
+      "article": "規則第4条",
+      "note": null,
+      "duty_count": 21
+    },
+    {
+      "id": "u027",
+      "name": "子育て支援課",
+      "level": "課",
+      "parent_id": "u023",
+      "branch": "市長部局 ─ 本庁(6部)",
+      "legal_source": "kisoku",
+      "article": "規則第3条",
+      "note": null,
+      "duty_count": 0
+    },
+    {
+      "id": "u028",
+      "name": "幼保連携推進班",
+      "level": "班",
+      "parent_id": "u027",
+      "branch": "市長部局 ─ 本庁(6部)",
+      "legal_source": "kisoku",
+      "article": "規則第4条",
+      "note": null,
+      "duty_count": 3
+    },
+    {
+      "id": "u029",
+      "name": "こども支援班",
+      "level": "班",
+      "parent_id": "u027",
+      "branch": "市長部局 ─ 本庁(6部)",
+      "legal_source": "kisoku",
+      "article": "規則第4条",
+      "note": null,
+      "duty_count": 5
+    },
+    {
+      "id": "u030",
+      "name": "こども家庭センター",
+      "level": "班",
+      "parent_id": "u027",
+      "branch": "市長部局 ─ 本庁(6部)",
+      "legal_source": "kisoku",
+      "article": "規則第4条",
+      "note": null,
+      "duty_count": 8
+    },
+    {
+      "id": "u031",
+      "name": "保護課",
+      "level": "課",
+      "parent_id": "u023",
+      "branch": "市長部局 ─ 本庁(6部)",
+      "legal_source": "kisoku",
+      "article": "規則第3条",
+      "note": null,
+      "duty_count": 0
+    },
+    {
+      "id": "u032",
+      "name": "保護班",
+      "level": "班",
+      "parent_id": "u031",
+      "branch": "市長部局 ─ 本庁(6部)",
+      "legal_source": "kisoku",
+      "article": "規則第4条",
+      "note": null,
+      "duty_count": 3
+    },
+    {
+      "id": "u033",
+      "name": "保護給付班",
+      "level": "班",
+      "parent_id": "u031",
+      "branch": "市長部局 ─ 本庁(6部)",
+      "legal_source": "kisoku",
+      "article": "規則第4条",
+      "note": null,
+      "duty_count": 3
+    },
+    {
+      "id": "u034",
+      "name": "税務課",
+      "level": "課",
+      "parent_id": "u023",
+      "branch": "市長部局 ─ 本庁(6部)",
+      "legal_source": "kisoku",
+      "article": "規則第3条",
+      "note": null,
+      "duty_count": 0
+    },
+    {
+      "id": "u035",
+      "name": "市民税班",
+      "level": "班",
+      "parent_id": "u034",
+      "branch": "市長部局 ─ 本庁(6部)",
+      "legal_source": "kisoku",
+      "article": "規則第4条",
+      "note": null,
+      "duty_count": 11
+    },
+    {
+      "id": "u036",
+      "name": "資産税班",
+      "level": "班",
+      "parent_id": "u034",
+      "branch": "市長部局 ─ 本庁(6部)",
+      "legal_source": "kisoku",
+      "article": "規則第4条",
+      "note": null,
+      "duty_count": 12
+    },
+    {
+      "id": "u037",
+      "name": "債権管理室",
+      "level": "室",
+      "parent_id": "u034",
+      "branch": "市長部局 ─ 本庁(6部)",
+      "legal_source": "kisoku",
+      "article": "規則第4条",
+      "note": "室の下に債権管理班・納税特別対策班を置く。",
+      "duty_count": 0
+    },
+    {
+      "id": "u038",
+      "name": "債権管理班",
+      "level": "班",
+      "parent_id": "u037",
+      "branch": "市長部局 ─ 本庁(6部)",
+      "legal_source": "kisoku",
+      "article": "規則第4条",
+      "note": null,
+      "duty_count": 6
+    },
+    {
+      "id": "u039",
+      "name": "納税特別対策班",
+      "level": "班",
+      "parent_id": "u037",
+      "branch": "市長部局 ─ 本庁(6部)",
+      "legal_source": "kisoku",
+      "article": "規則第4条",
+      "note": null,
+      "duty_count": 7
+    },
+    {
+      "id": "u040",
+      "name": "保健環境部",
+      "level": "部",
+      "parent_id": null,
+      "branch": "市長部局 ─ 本庁(6部)",
+      "legal_source": "jorei",
+      "article": "条例第1条・第2条",
+      "note": null,
+      "duty_count": 6
+    },
+    {
+      "id": "u041",
+      "name": "保険課",
+      "level": "課",
+      "parent_id": "u040",
+      "branch": "市長部局 ─ 本庁(6部)",
+      "legal_source": "kisoku",
+      "article": "規則第3条",
+      "note": null,
+      "duty_count": 0
+    },
+    {
+      "id": "u042",
+      "name": "国保・後期・年金班",
+      "level": "班",
+      "parent_id": "u041",
+      "branch": "市長部局 ─ 本庁(6部)",
+      "legal_source": "kisoku",
+      "article": "規則第4条",
+      "note": null,
+      "duty_count": 20
+    },
+    {
+      "id": "u043",
+      "name": "介護保険班",
+      "level": "班",
+      "parent_id": "u041",
+      "branch": "市長部局 ─ 本庁(6部)",
+      "legal_source": "kisoku",
+      "article": "規則第4条",
+      "note": null,
+      "duty_count": 12
+    },
+    {
+      "id": "u044",
+      "name": "長寿支援課",
+      "level": "課",
+      "parent_id": "u040",
+      "branch": "市長部局 ─ 本庁(6部)",
+      "legal_source": "kisoku",
+      "article": "規則第3条",
+      "note": null,
+      "duty_count": 0
+    },
+    {
+      "id": "u045",
+      "name": "長寿福祉班",
+      "level": "班",
+      "parent_id": "u044",
+      "branch": "市長部局 ─ 本庁(6部)",
+      "legal_source": "kisoku",
+      "article": "規則第4条",
+      "note": null,
+      "duty_count": 6
+    },
+    {
+      "id": "u046",
+      "name": "地域包括支援センター",
+      "level": "班",
+      "parent_id": "u044",
+      "branch": "市長部局 ─ 本庁(6部)",
+      "legal_source": "kisoku",
+      "article": "規則第4条",
+      "note": null,
+      "duty_count": 8
+    },
+    {
+      "id": "u047",
+      "name": "健康増進課",
+      "level": "課",
+      "parent_id": "u040",
+      "branch": "市長部局 ─ 本庁(6部)",
+      "legal_source": "kisoku",
+      "article": "規則第3条",
+      "note": null,
+      "duty_count": 0
+    },
+    {
+      "id": "u048",
+      "name": "健康増進班",
+      "level": "班",
+      "parent_id": "u047",
+      "branch": "市長部局 ─ 本庁(6部)",
+      "legal_source": "kisoku",
+      "article": "規則第4条",
+      "note": null,
+      "duty_count": 14
+    },
+    {
+      "id": "u049",
+      "name": "環境衛生課",
+      "level": "課",
+      "parent_id": "u040",
+      "branch": "市長部局 ─ 本庁(6部)",
+      "legal_source": "kisoku",
+      "article": "規則第3条",
+      "note": null,
+      "duty_count": 0
+    },
+    {
+      "id": "u050",
+      "name": "環境衛生班",
+      "level": "班",
+      "parent_id": "u049",
+      "branch": "市長部局 ─ 本庁(6部)",
+      "legal_source": "kisoku",
+      "article": "規則第4条",
+      "note": null,
+      "duty_count": 17
+    },
+    {
+      "id": "u051",
+      "name": "廃棄物対策班",
+      "level": "班",
+      "parent_id": "u049",
+      "branch": "市長部局 ─ 本庁(6部)",
+      "legal_source": "kisoku",
+      "article": "規則第4条",
+      "note": null,
+      "duty_count": 3
+    },
+    {
+      "id": "u052",
+      "name": "産業推進部",
+      "level": "部",
+      "parent_id": null,
+      "branch": "市長部局 ─ 本庁(6部)",
+      "legal_source": "jorei",
+      "article": "条例第1条・第2条",
+      "note": "令和7年6月施行の現行名称。旧・農林水産部系の課に商工振興を加えた構成。",
+      "duty_count": 7
+    },
+    {
+      "id": "u053",
+      "name": "農林課",
+      "level": "課",
+      "parent_id": "u052",
+      "branch": "市長部局 ─ 本庁(6部)",
+      "legal_source": "kisoku",
+      "article": "規則第3条",
+      "note": null,
+      "duty_count": 0
+    },
+    {
+      "id": "u054",
+      "name": "農業振興班",
+      "level": "班",
+      "parent_id": "u053",
+      "branch": "市長部局 ─ 本庁(6部)",
+      "legal_source": "kisoku",
+      "article": "規則第4条",
+      "note": null,
+      "duty_count": 19
+    },
+    {
+      "id": "u055",
+      "name": "農林整備班",
+      "level": "班",
+      "parent_id": "u053",
+      "branch": "市長部局 ─ 本庁(6部)",
+      "legal_source": "kisoku",
+      "article": "規則第4条",
+      "note": null,
+      "duty_count": 17
+    },
+    {
+      "id": "u056",
+      "name": "水産課",
+      "level": "課",
+      "parent_id": "u052",
+      "branch": "市長部局 ─ 本庁(6部)",
+      "legal_source": "kisoku",
+      "article": "規則第3条",
+      "note": null,
+      "duty_count": 0
+    },
+    {
+      "id": "u057",
+      "name": "水産班",
+      "level": "班",
+      "parent_id": "u056",
+      "branch": "市長部局 ─ 本庁(6部)",
+      "legal_source": "kisoku",
+      "article": "規則第4条",
+      "note": null,
+      "duty_count": 8
+    },
+    {
+      "id": "u058",
+      "name": "港湾漁港班",
+      "level": "班",
+      "parent_id": "u056",
+      "branch": "市長部局 ─ 本庁(6部)",
+      "legal_source": "kisoku",
+      "article": "規則第4条",
+      "note": null,
+      "duty_count": 3
+    },
+    {
+      "id": "u059",
+      "name": "管理班",
+      "level": "班",
+      "parent_id": "u056",
+      "branch": "市長部局 ─ 本庁(6部)",
+      "legal_source": "kisoku",
+      "article": "規則第4条",
+      "note": null,
+      "duty_count": 8
+    },
+    {
+      "id": "u060",
+      "name": "商工振興課",
+      "level": "課",
+      "parent_id": "u052",
+      "branch": "市長部局 ─ 本庁(6部)",
+      "legal_source": "kisoku",
+      "article": "規則第3条",
+      "note": null,
+      "duty_count": 0
+    },
+    {
+      "id": "u061",
+      "name": "ふるさと振興班",
+      "level": "班",
+      "parent_id": "u060",
+      "branch": "市長部局 ─ 本庁(6部)",
+      "legal_source": "kisoku",
+      "article": "規則第4条",
+      "note": null,
+      "duty_count": 12
+    },
+    {
+      "id": "u062",
+      "name": "雇用対策班",
+      "level": "班",
+      "parent_id": "u060",
+      "branch": "市長部局 ─ 本庁(6部)",
+      "legal_source": "kisoku",
+      "article": "規則第4条",
+      "note": null,
+      "duty_count": 4
+    },
+    {
+      "id": "u063",
+      "name": "家畜診療所",
+      "level": "課",
+      "parent_id": "u052",
+      "branch": "市長部局 ─ 本庁(6部)",
+      "legal_source": "kisoku",
+      "article": "規則第3条",
+      "note": null,
+      "duty_count": 0
+    },
+    {
+      "id": "u064",
+      "name": "衛生指導班",
+      "level": "班",
+      "parent_id": "u063",
+      "branch": "市長部局 ─ 本庁(6部)",
+      "legal_source": "kisoku",
+      "article": "規則第4条",
+      "note": null,
+      "duty_count": 4
+    },
+    {
+      "id": "u065",
+      "name": "防疫班",
+      "level": "班",
+      "parent_id": "u063",
+      "branch": "市長部局 ─ 本庁(6部)",
+      "legal_source": "kisoku",
+      "article": "規則第4条",
+      "note": null,
+      "duty_count": 2
+    },
+    {
+      "id": "u066",
+      "name": "建設部",
+      "level": "部",
+      "parent_id": null,
+      "branch": "市長部局 ─ 本庁(6部)",
+      "legal_source": "jorei",
+      "article": "条例第1条・第2条",
+      "note": null,
+      "duty_count": 5
+    },
+    {
+      "id": "u067",
+      "name": "建設課",
+      "level": "課",
+      "parent_id": "u066",
+      "branch": "市長部局 ─ 本庁(6部)",
+      "legal_source": "kisoku",
+      "article": "規則第3条",
+      "note": null,
+      "duty_count": 0
+    },
+    {
+      "id": "u068",
+      "name": "土木班",
+      "level": "班",
+      "parent_id": "u067",
+      "branch": "市長部局 ─ 本庁(6部)",
+      "legal_source": "kisoku",
+      "article": "規則第4条",
+      "note": null,
+      "duty_count": 10
+    },
+    {
+      "id": "u069",
+      "name": "管理土地対策班",
+      "level": "班",
+      "parent_id": "u067",
+      "branch": "市長部局 ─ 本庁(6部)",
+      "legal_source": "kisoku",
+      "article": "規則第4条",
+      "note": null,
+      "duty_count": 14
+    },
+    {
+      "id": "u070",
+      "name": "住宅班",
+      "level": "班",
+      "parent_id": "u067",
+      "branch": "市長部局 ─ 本庁(6部)",
+      "legal_source": "kisoku",
+      "article": "規則第4条",
+      "note": null,
+      "duty_count": 6
+    },
+    {
+      "id": "u071",
+      "name": "建築整備班",
+      "level": "班",
+      "parent_id": "u067",
+      "branch": "市長部局 ─ 本庁(6部)",
+      "legal_source": "kisoku",
+      "article": "規則第4条",
+      "note": null,
+      "duty_count": 5
+    },
+    {
+      "id": "u072",
+      "name": "上下水道課",
+      "level": "課",
+      "parent_id": "u066",
+      "branch": "市長部局 ─ 本庁(6部)",
+      "legal_source": "kisoku",
+      "article": "規則第3条",
+      "note": null,
+      "duty_count": 0
+    },
+    {
+      "id": "u073",
+      "name": "水道班",
+      "level": "班",
+      "parent_id": "u072",
+      "branch": "市長部局 ─ 本庁(6部)",
+      "legal_source": "kisoku",
+      "article": "規則第4条",
+      "note": null,
+      "duty_count": 1
+    },
+    {
+      "id": "u074",
+      "name": "下水道班",
+      "level": "班",
+      "parent_id": "u072",
+      "branch": "市長部局 ─ 本庁(6部)",
+      "legal_source": "kisoku",
+      "article": "規則第4条",
+      "note": null,
+      "duty_count": 3
+    },
+    {
+      "id": "u075",
+      "name": "会計課",
+      "level": "課",
+      "parent_id": null,
+      "branch": "会計管理者の補助組織",
+      "legal_source": "kisoku",
+      "article": "規則第5条",
+      "note": "会計課に会計係を置く。分掌事務は本モックでは未収録(規則本文参照)。",
+      "duty_count": 0
+    },
+    {
+      "id": "u076",
+      "name": "会計係",
+      "level": "班",
+      "parent_id": "u075",
+      "branch": "会計管理者の補助組織",
+      "legal_source": "kisoku",
+      "article": "規則第5条",
+      "note": "出納その他の会計事務(詳細は規則本文参照)。",
+      "duty_count": 0
+    },
+    {
+      "id": "u077",
+      "name": "郷ノ浦支所",
+      "level": "出先機関",
+      "parent_id": null,
+      "branch": "出先機関(市長部局)",
+      "legal_source": "kisoku",
+      "article": "規則第14条",
+      "note": "支所には市民生活班を置く(郷ノ浦支所は地域班を置かない)。",
+      "duty_count": 0
+    },
+    {
+      "id": "u078",
+      "name": "市民生活班",
+      "level": "班",
+      "parent_id": "u077",
+      "branch": "出先機関(市長部局)",
+      "legal_source": "kisoku",
+      "article": "規則第14条",
+      "note": null,
+      "duty_count": 1
+    },
+    {
+      "id": "u079",
+      "name": "勝本支所",
+      "level": "出先機関",
+      "parent_id": null,
+      "branch": "出先機関(市長部局)",
+      "legal_source": "kisoku",
+      "article": "規則第14条",
+      "note": null,
+      "duty_count": 0
+    },
+    {
+      "id": "u080",
+      "name": "市民生活班",
+      "level": "班",
+      "parent_id": "u079",
+      "branch": "出先機関(市長部局)",
+      "legal_source": "kisoku",
+      "article": "規則第14条",
+      "note": null,
+      "duty_count": 1
+    },
+    {
+      "id": "u081",
+      "name": "地域班",
+      "level": "班",
+      "parent_id": "u079",
+      "branch": "出先機関(市長部局)",
+      "legal_source": "kisoku",
+      "article": "規則第14条",
+      "note": null,
+      "duty_count": 1
+    },
+    {
+      "id": "u082",
+      "name": "芦辺支所",
+      "level": "出先機関",
+      "parent_id": null,
+      "branch": "出先機関(市長部局)",
+      "legal_source": "kisoku",
+      "article": "規則第14条",
+      "note": null,
+      "duty_count": 0
+    },
+    {
+      "id": "u083",
+      "name": "市民生活班",
+      "level": "班",
+      "parent_id": "u082",
+      "branch": "出先機関(市長部局)",
+      "legal_source": "kisoku",
+      "article": "規則第14条",
+      "note": null,
+      "duty_count": 1
+    },
+    {
+      "id": "u084",
+      "name": "地域班",
+      "level": "班",
+      "parent_id": "u082",
+      "branch": "出先機関(市長部局)",
+      "legal_source": "kisoku",
+      "article": "規則第14条",
+      "note": null,
+      "duty_count": 1
+    },
+    {
+      "id": "u085",
+      "name": "石田支所",
+      "level": "出先機関",
+      "parent_id": null,
+      "branch": "出先機関(市長部局)",
+      "legal_source": "kisoku",
+      "article": "規則第14条",
+      "note": null,
+      "duty_count": 0
+    },
+    {
+      "id": "u086",
+      "name": "市民生活班",
+      "level": "班",
+      "parent_id": "u085",
+      "branch": "出先機関(市長部局)",
+      "legal_source": "kisoku",
+      "article": "規則第14条",
+      "note": null,
+      "duty_count": 1
+    },
+    {
+      "id": "u087",
+      "name": "地域班",
+      "level": "班",
+      "parent_id": "u085",
+      "branch": "出先機関(市長部局)",
+      "legal_source": "kisoku",
+      "article": "規則第14条",
+      "note": null,
+      "duty_count": 1
+    },
+    {
+      "id": "u088",
+      "name": "福祉事務所",
+      "level": "出先機関",
+      "parent_id": null,
+      "branch": "出先機関(市長部局)",
+      "legal_source": "kisoku",
+      "article": "規則第27条",
+      "note": "市民部及び保健環境部内に置く。所長は市民部長が兼務。",
+      "duty_count": 1
+    },
+    {
+      "id": "u089",
+      "name": "事務所(8か所)",
+      "level": "出先機関",
+      "parent_id": null,
+      "branch": "出先機関(市長部局)",
+      "legal_source": "kisoku",
+      "article": "規則第28条",
+      "note": "渡良・柳田・沼津・志原・初山(以上郷ノ浦町)、湯本(勝本町)、那賀・箱崎(以上芦辺町)。",
+      "duty_count": 1
+    },
+    {
+      "id": "u090",
+      "name": "教育総務課",
+      "level": "課",
+      "parent_id": null,
+      "branch": "教育委員会事務局(市長部局とは別系統)",
+      "legal_source": "kyoiku",
+      "article": "教委規則第2条",
+      "note": null,
+      "duty_count": 0
+    },
+    {
+      "id": "u091",
+      "name": "総務班",
+      "level": "班",
+      "parent_id": "u090",
+      "branch": "教育委員会事務局(市長部局とは別系統)",
+      "legal_source": "kyoiku",
+      "article": "教委規則",
+      "note": null,
+      "duty_count": 33
+    },
+    {
+      "id": "u092",
+      "name": "学校教育課",
+      "level": "課",
+      "parent_id": null,
+      "branch": "教育委員会事務局(市長部局とは別系統)",
+      "legal_source": "kyoiku",
+      "article": "教委規則第2条",
+      "note": null,
+      "duty_count": 0
+    },
+    {
+      "id": "u093",
+      "name": "学校教育班",
+      "level": "班",
+      "parent_id": "u092",
+      "branch": "教育委員会事務局(市長部局とは別系統)",
+      "legal_source": "kyoiku",
+      "article": "教委規則",
+      "note": null,
+      "duty_count": 22
+    },
+    {
+      "id": "u094",
+      "name": "社会教育課",
+      "level": "課",
+      "parent_id": null,
+      "branch": "教育委員会事務局(市長部局とは別系統)",
+      "legal_source": "kyoiku",
+      "article": "教委規則第2条",
+      "note": null,
+      "duty_count": 0
+    },
+    {
+      "id": "u095",
+      "name": "生涯学習班",
+      "level": "班",
+      "parent_id": "u094",
+      "branch": "教育委員会事務局(市長部局とは別系統)",
+      "legal_source": "kyoiku",
+      "article": "教委規則",
+      "note": null,
+      "duty_count": 27
+    },
+    {
+      "id": "u096",
+      "name": "文化財班",
+      "level": "班",
+      "parent_id": "u094",
+      "branch": "教育委員会事務局(市長部局とは別系統)",
+      "legal_source": "kyoiku",
+      "article": "教委規則",
+      "note": null,
+      "duty_count": 8
+    }
+  ],
+  "duties": [
+    {
+      "id": "d0001",
+      "unit_id": "u001",
+      "unit_name": "総務部",
+      "seq": 1,
+      "text": "市議会に関すること",
+      "legal_source": "jorei",
+      "article": "条例第1条・第2条"
+    },
+    {
+      "id": "d0002",
+      "unit_id": "u001",
+      "unit_name": "総務部",
+      "seq": 2,
+      "text": "行政管理に関すること",
+      "legal_source": "jorei",
+      "article": "条例第1条・第2条"
+    },
+    {
+      "id": "d0003",
+      "unit_id": "u001",
+      "unit_name": "総務部",
+      "seq": 3,
+      "text": "総合計画に関すること",
+      "legal_source": "jorei",
+      "article": "条例第1条・第2条"
+    },
+    {
+      "id": "d0004",
+      "unit_id": "u001",
+      "unit_name": "総務部",
+      "seq": 4,
+      "text": "職員に関すること",
+      "legal_source": "jorei",
+      "article": "条例第1条・第2条"
+    },
+    {
+      "id": "d0005",
+      "unit_id": "u001",
+      "unit_name": "総務部",
+      "seq": 5,
+      "text": "文書に関すること",
+      "legal_source": "jorei",
+      "article": "条例第1条・第2条"
+    },
+    {
+      "id": "d0006",
+      "unit_id": "u001",
+      "unit_name": "総務部",
+      "seq": 6,
+      "text": "防災に関すること",
+      "legal_source": "jorei",
+      "article": "条例第1条・第2条"
+    },
+    {
+      "id": "d0007",
+      "unit_id": "u001",
+      "unit_name": "総務部",
+      "seq": 7,
+      "text": "人権及び同和対策に関すること",
+      "legal_source": "jorei",
+      "article": "条例第1条・第2条"
+    },
+    {
+      "id": "d0008",
+      "unit_id": "u001",
+      "unit_name": "総務部",
+      "seq": 8,
+      "text": "広報及び広聴に関すること",
+      "legal_source": "jorei",
+      "article": "条例第1条・第2条"
+    },
+    {
+      "id": "d0009",
+      "unit_id": "u001",
+      "unit_name": "総務部",
+      "seq": 9,
+      "text": "交通対策に関すること",
+      "legal_source": "jorei",
+      "article": "条例第1条・第2条"
+    },
+    {
+      "id": "d0010",
+      "unit_id": "u001",
+      "unit_name": "総務部",
+      "seq": 10,
+      "text": "財政に関すること",
+      "legal_source": "jorei",
+      "article": "条例第1条・第2条"
+    },
+    {
+      "id": "d0011",
+      "unit_id": "u001",
+      "unit_name": "総務部",
+      "seq": 11,
+      "text": "入札及び契約に関すること",
+      "legal_source": "jorei",
+      "article": "条例第1条・第2条"
+    },
+    {
+      "id": "d0012",
+      "unit_id": "u001",
+      "unit_name": "総務部",
+      "seq": 12,
+      "text": "財産管理に関すること",
+      "legal_source": "jorei",
+      "article": "条例第1条・第2条"
+    },
+    {
+      "id": "d0013",
+      "unit_id": "u001",
+      "unit_name": "総務部",
+      "seq": 13,
+      "text": "SDGs未来都市に関すること",
+      "legal_source": "jorei",
+      "article": "条例第1条・第2条"
+    },
+    {
+      "id": "d0014",
+      "unit_id": "u001",
+      "unit_name": "総務部",
+      "seq": 14,
+      "text": "情報管理及び自治体デジタル化の推進に関すること",
+      "legal_source": "jorei",
+      "article": "条例第1条・第2条"
+    },
+    {
+      "id": "d0015",
+      "unit_id": "u001",
+      "unit_name": "総務部",
+      "seq": 15,
+      "text": "他の組織との連絡調整に関すること",
+      "legal_source": "jorei",
+      "article": "条例第1条・第2条"
+    },
+    {
+      "id": "d0016",
+      "unit_id": "u001",
+      "unit_name": "総務部",
+      "seq": 16,
+      "text": "市長の特命事項に関すること",
+      "legal_source": "jorei",
+      "article": "条例第1条・第2条"
+    },
+    {
+      "id": "d0017",
+      "unit_id": "u003",
+      "unit_name": "総務班",
+      "seq": 1,
+      "text": "議会の招集及び議案",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0018",
+      "unit_id": "u003",
+      "unit_name": "総務班",
+      "seq": 2,
+      "text": "条例、規則等の制定及び改廃",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0019",
+      "unit_id": "u003",
+      "unit_name": "総務班",
+      "seq": 3,
+      "text": "公告式",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0020",
+      "unit_id": "u003",
+      "unit_name": "総務班",
+      "seq": 4,
+      "text": "寄附",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0021",
+      "unit_id": "u003",
+      "unit_name": "総務班",
+      "seq": 5,
+      "text": "公印の管守",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0022",
+      "unit_id": "u003",
+      "unit_name": "総務班",
+      "seq": 6,
+      "text": "固定資産評価審査委員会",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0023",
+      "unit_id": "u003",
+      "unit_name": "総務班",
+      "seq": 7,
+      "text": "行政相談",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0024",
+      "unit_id": "u003",
+      "unit_name": "総務班",
+      "seq": 8,
+      "text": "特別職報酬等審議会",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0025",
+      "unit_id": "u003",
+      "unit_name": "総務班",
+      "seq": 9,
+      "text": "審査請求及び訴訟",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0026",
+      "unit_id": "u003",
+      "unit_name": "総務班",
+      "seq": 10,
+      "text": "行政手続",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0027",
+      "unit_id": "u003",
+      "unit_name": "総務班",
+      "seq": 11,
+      "text": "政治倫理",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0028",
+      "unit_id": "u003",
+      "unit_name": "総務班",
+      "seq": 12,
+      "text": "庁議",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0029",
+      "unit_id": "u003",
+      "unit_name": "総務班",
+      "seq": 13,
+      "text": "庁内の取締り",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0030",
+      "unit_id": "u003",
+      "unit_name": "総務班",
+      "seq": 14,
+      "text": "庁内、支所及び郷ノ浦町内の事務所との連絡調整",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0031",
+      "unit_id": "u003",
+      "unit_name": "総務班",
+      "seq": 15,
+      "text": "秘書",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0032",
+      "unit_id": "u003",
+      "unit_name": "総務班",
+      "seq": 16,
+      "text": "儀式、典礼、褒賞、表彰その他行事",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0033",
+      "unit_id": "u003",
+      "unit_name": "総務班",
+      "seq": 17,
+      "text": "陳情及び請願",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0034",
+      "unit_id": "u003",
+      "unit_name": "総務班",
+      "seq": 18,
+      "text": "交渉及び渉外",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0035",
+      "unit_id": "u003",
+      "unit_name": "総務班",
+      "seq": 19,
+      "text": "文書の収受及び発送",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0036",
+      "unit_id": "u003",
+      "unit_name": "総務班",
+      "seq": 20,
+      "text": "文書の管理",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0037",
+      "unit_id": "u003",
+      "unit_name": "総務班",
+      "seq": 21,
+      "text": "情報公開(受付、調整及び処理)",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0038",
+      "unit_id": "u003",
+      "unit_name": "総務班",
+      "seq": 22,
+      "text": "個人情報の保護",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0039",
+      "unit_id": "u003",
+      "unit_name": "総務班",
+      "seq": 23,
+      "text": "渡船事業(フェリーみしま)",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0040",
+      "unit_id": "u003",
+      "unit_name": "総務班",
+      "seq": 24,
+      "text": "フェリーみしまの運航",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0041",
+      "unit_id": "u003",
+      "unit_name": "総務班",
+      "seq": 25,
+      "text": "壱岐空港ターミナルビルの管理運営",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0042",
+      "unit_id": "u003",
+      "unit_name": "総務班",
+      "seq": 26,
+      "text": "地方バス路線",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0043",
+      "unit_id": "u003",
+      "unit_name": "総務班",
+      "seq": 27,
+      "text": "コミュニティバス",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0044",
+      "unit_id": "u003",
+      "unit_name": "総務班",
+      "seq": 28,
+      "text": "航路・航空路対策",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0045",
+      "unit_id": "u003",
+      "unit_name": "総務班",
+      "seq": 29,
+      "text": "国境離島運賃低廉化",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0046",
+      "unit_id": "u003",
+      "unit_name": "総務班",
+      "seq": 30,
+      "text": "パスポート事務",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0047",
+      "unit_id": "u003",
+      "unit_name": "総務班",
+      "seq": 31,
+      "text": "公共告知放送",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0048",
+      "unit_id": "u003",
+      "unit_name": "総務班",
+      "seq": 32,
+      "text": "更生保護",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0049",
+      "unit_id": "u003",
+      "unit_name": "総務班",
+      "seq": 33,
+      "text": "人権・同和対策",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0050",
+      "unit_id": "u003",
+      "unit_name": "総務班",
+      "seq": 34,
+      "text": "総合賠償補償",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0051",
+      "unit_id": "u003",
+      "unit_name": "総務班",
+      "seq": 35,
+      "text": "後援名義",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0052",
+      "unit_id": "u003",
+      "unit_name": "総務班",
+      "seq": 36,
+      "text": "防犯灯",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0053",
+      "unit_id": "u003",
+      "unit_name": "総務班",
+      "seq": 37,
+      "text": "選挙管理委員会",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0054",
+      "unit_id": "u003",
+      "unit_name": "総務班",
+      "seq": 38,
+      "text": "選挙事務",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0055",
+      "unit_id": "u003",
+      "unit_name": "総務班",
+      "seq": 39,
+      "text": "市長の特命事項",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0056",
+      "unit_id": "u003",
+      "unit_name": "総務班",
+      "seq": 40,
+      "text": "その他他の所管に属しないこと",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0057",
+      "unit_id": "u003",
+      "unit_name": "総務班",
+      "seq": 41,
+      "text": "部の総括",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0058",
+      "unit_id": "u003",
+      "unit_name": "総務班",
+      "seq": 42,
+      "text": "課の庶務",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0059",
+      "unit_id": "u004",
+      "unit_name": "職員班",
+      "seq": 1,
+      "text": "職員の進退、身分、人事、給与、服務、賞罰及び研修",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0060",
+      "unit_id": "u004",
+      "unit_name": "職員班",
+      "seq": 2,
+      "text": "組織及び事務の改善管理並びに事務能率の向上",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0061",
+      "unit_id": "u004",
+      "unit_name": "職員班",
+      "seq": 3,
+      "text": "職員等の公務災害補償、共済、健康管理、職員安全衛生委員会、教養等福利厚生及び退職手当",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0062",
+      "unit_id": "u004",
+      "unit_name": "職員班",
+      "seq": 4,
+      "text": "各種委員の任免",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0063",
+      "unit_id": "u004",
+      "unit_name": "職員班",
+      "seq": 5,
+      "text": "職員の安全運転管理",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0064",
+      "unit_id": "u004",
+      "unit_name": "職員班",
+      "seq": 6,
+      "text": "公平事務",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0065",
+      "unit_id": "u005",
+      "unit_name": "危機管理班",
+      "seq": 1,
+      "text": "防災及び防犯",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0066",
+      "unit_id": "u005",
+      "unit_name": "危機管理班",
+      "seq": 2,
+      "text": "緊急告知放送",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0067",
+      "unit_id": "u005",
+      "unit_name": "危機管理班",
+      "seq": 3,
+      "text": "国民保護",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0068",
+      "unit_id": "u005",
+      "unit_name": "危機管理班",
+      "seq": 4,
+      "text": "交通安全",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0069",
+      "unit_id": "u005",
+      "unit_name": "危機管理班",
+      "seq": 5,
+      "text": "交通災害共済",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0070",
+      "unit_id": "u005",
+      "unit_name": "危機管理班",
+      "seq": 6,
+      "text": "災害貸付",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0071",
+      "unit_id": "u005",
+      "unit_name": "危機管理班",
+      "seq": 7,
+      "text": "自衛官の募集",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0072",
+      "unit_id": "u005",
+      "unit_name": "危機管理班",
+      "seq": 8,
+      "text": "計量器及び立入検査",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0073",
+      "unit_id": "u005",
+      "unit_name": "危機管理班",
+      "seq": 9,
+      "text": "消費者行政",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0074",
+      "unit_id": "u005",
+      "unit_name": "危機管理班",
+      "seq": 10,
+      "text": "その他危機管理",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0075",
+      "unit_id": "u007",
+      "unit_name": "財政班",
+      "seq": 1,
+      "text": "予算",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0076",
+      "unit_id": "u007",
+      "unit_name": "財政班",
+      "seq": 2,
+      "text": "決算",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0077",
+      "unit_id": "u007",
+      "unit_name": "財政班",
+      "seq": 3,
+      "text": "地方債",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0078",
+      "unit_id": "u007",
+      "unit_name": "財政班",
+      "seq": 4,
+      "text": "地方交付税",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0079",
+      "unit_id": "u007",
+      "unit_name": "財政班",
+      "seq": 5,
+      "text": "基金",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0080",
+      "unit_id": "u007",
+      "unit_name": "財政班",
+      "seq": 6,
+      "text": "その他財政",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0081",
+      "unit_id": "u007",
+      "unit_name": "財政班",
+      "seq": 7,
+      "text": "課の庶務",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0082",
+      "unit_id": "u008",
+      "unit_name": "契約管財班",
+      "seq": 1,
+      "text": "建設工事並びに設計・調査・測量業務の入札及び契約",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0083",
+      "unit_id": "u008",
+      "unit_name": "契約管財班",
+      "seq": 2,
+      "text": "市の入札参加資格申請",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0084",
+      "unit_id": "u008",
+      "unit_name": "契約管財班",
+      "seq": 3,
+      "text": "公有財産",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0085",
+      "unit_id": "u008",
+      "unit_name": "契約管財班",
+      "seq": 4,
+      "text": "普通財産の取得、処分及び管理",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0086",
+      "unit_id": "u008",
+      "unit_name": "契約管財班",
+      "seq": 5,
+      "text": "庁用車の損害共済及び台帳管理",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0087",
+      "unit_id": "u008",
+      "unit_name": "契約管財班",
+      "seq": 6,
+      "text": "壱岐市高等職業訓練校",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0088",
+      "unit_id": "u008",
+      "unit_name": "契約管財班",
+      "seq": 7,
+      "text": "壱岐市自動車教習場",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0089",
+      "unit_id": "u008",
+      "unit_name": "契約管財班",
+      "seq": 8,
+      "text": "市有物件の災害共済",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0090",
+      "unit_id": "u008",
+      "unit_name": "契約管財班",
+      "seq": 9,
+      "text": "庁舎管理に係る保守等契約",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0091",
+      "unit_id": "u008",
+      "unit_name": "契約管財班",
+      "seq": 10,
+      "text": "市の電話機、ファクシミリ等の設置",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0092",
+      "unit_id": "u008",
+      "unit_name": "契約管財班",
+      "seq": 11,
+      "text": "その他入札、契約及び財産管理",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0093",
+      "unit_id": "u010",
+      "unit_name": "共創推進班",
+      "seq": 1,
+      "text": "総合計画",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0094",
+      "unit_id": "u010",
+      "unit_name": "共創推進班",
+      "seq": 2,
+      "text": "行政改革",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0095",
+      "unit_id": "u010",
+      "unit_name": "共創推進班",
+      "seq": 3,
+      "text": "地方分権改革",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0096",
+      "unit_id": "u010",
+      "unit_name": "共創推進班",
+      "seq": 4,
+      "text": "政策評価",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0097",
+      "unit_id": "u010",
+      "unit_name": "共創推進班",
+      "seq": 5,
+      "text": "補助金等検討委員会",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0098",
+      "unit_id": "u010",
+      "unit_name": "共創推進班",
+      "seq": 6,
+      "text": "SDGs未来都市及び自治体モデル事業",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0099",
+      "unit_id": "u010",
+      "unit_name": "共創推進班",
+      "seq": 7,
+      "text": "テレワーク及び未来づくり",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0100",
+      "unit_id": "u010",
+      "unit_name": "共創推進班",
+      "seq": 8,
+      "text": "エンゲージメントパートナー制度",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0101",
+      "unit_id": "u010",
+      "unit_name": "共創推進班",
+      "seq": 9,
+      "text": "東京事務所",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0102",
+      "unit_id": "u010",
+      "unit_name": "共創推進班",
+      "seq": 10,
+      "text": "その他特命事業等",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0103",
+      "unit_id": "u010",
+      "unit_name": "共創推進班",
+      "seq": 11,
+      "text": "課の庶務",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0104",
+      "unit_id": "u011",
+      "unit_name": "広報戦略班",
+      "seq": 1,
+      "text": "市広報の編集及び発行",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0105",
+      "unit_id": "u011",
+      "unit_name": "広報戦略班",
+      "seq": 2,
+      "text": "有料広告掲載",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0106",
+      "unit_id": "u011",
+      "unit_name": "広報戦略班",
+      "seq": 3,
+      "text": "ホームページの運営",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0107",
+      "unit_id": "u011",
+      "unit_name": "広報戦略班",
+      "seq": 4,
+      "text": "報道機関との連絡調整",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0108",
+      "unit_id": "u011",
+      "unit_name": "広報戦略班",
+      "seq": 5,
+      "text": "その他広報広聴",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0109",
+      "unit_id": "u012",
+      "unit_name": "情報管理班",
+      "seq": 1,
+      "text": "情報化施策の総合的な企画及び調整",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0110",
+      "unit_id": "u012",
+      "unit_name": "情報管理班",
+      "seq": 2,
+      "text": "情報セキュリティ",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0111",
+      "unit_id": "u012",
+      "unit_name": "情報管理班",
+      "seq": 3,
+      "text": "情報システムの企画、運用及び管理並びに支援",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0112",
+      "unit_id": "u012",
+      "unit_name": "情報管理班",
+      "seq": 4,
+      "text": "情報システム基盤の整備及び維持管理",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0113",
+      "unit_id": "u012",
+      "unit_name": "情報管理班",
+      "seq": 5,
+      "text": "ケーブルテレビ施設の運営及び管理",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0114",
+      "unit_id": "u013",
+      "unit_name": "地域振興部",
+      "seq": 1,
+      "text": "市政の総合的な企画及び調整(総合計画を除く)",
+      "legal_source": "jorei",
+      "article": "条例第1条・第2条"
+    },
+    {
+      "id": "d0115",
+      "unit_id": "u013",
+      "unit_name": "地域振興部",
+      "seq": 2,
+      "text": "市民協働",
+      "legal_source": "jorei",
+      "article": "条例第1条・第2条"
+    },
+    {
+      "id": "d0116",
+      "unit_id": "u013",
+      "unit_name": "地域振興部",
+      "seq": 3,
+      "text": "エネルギー政策",
+      "legal_source": "jorei",
+      "article": "条例第1条・第2条"
+    },
+    {
+      "id": "d0117",
+      "unit_id": "u013",
+      "unit_name": "地域振興部",
+      "seq": 4,
+      "text": "統計",
+      "legal_source": "jorei",
+      "article": "条例第1条・第2条"
+    },
+    {
+      "id": "d0118",
+      "unit_id": "u013",
+      "unit_name": "地域振興部",
+      "seq": 5,
+      "text": "観光",
+      "legal_source": "jorei",
+      "article": "条例第1条・第2条"
+    },
+    {
+      "id": "d0119",
+      "unit_id": "u013",
+      "unit_name": "地域振興部",
+      "seq": 6,
+      "text": "芸術文化の振興",
+      "legal_source": "jorei",
+      "article": "条例第1条・第2条"
+    },
+    {
+      "id": "d0120",
+      "unit_id": "u013",
+      "unit_name": "地域振興部",
+      "seq": 7,
+      "text": "スポーツの普及振興",
+      "legal_source": "jorei",
+      "article": "条例第1条・第2条"
+    },
+    {
+      "id": "d0121",
+      "unit_id": "u013",
+      "unit_name": "地域振興部",
+      "seq": 8,
+      "text": "スポーツ交流イベント",
+      "legal_source": "jorei",
+      "article": "条例第1条・第2条"
+    },
+    {
+      "id": "d0122",
+      "unit_id": "u013",
+      "unit_name": "地域振興部",
+      "seq": 9,
+      "text": "文化財の保護及び活用",
+      "legal_source": "jorei",
+      "article": "条例第1条・第2条"
+    },
+    {
+      "id": "d0123",
+      "unit_id": "u013",
+      "unit_name": "地域振興部",
+      "seq": 10,
+      "text": "壱岐市立一支国博物館等の管理運営",
+      "legal_source": "jorei",
+      "article": "条例第1条・第2条"
+    },
+    {
+      "id": "d0124",
+      "unit_id": "u015",
+      "unit_name": "企画市民協働班",
+      "seq": 1,
+      "text": "市民協働のまちづくり",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0125",
+      "unit_id": "u015",
+      "unit_name": "企画市民協働班",
+      "seq": 2,
+      "text": "自治基本条例",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0126",
+      "unit_id": "u015",
+      "unit_name": "企画市民協働班",
+      "seq": 3,
+      "text": "男女共同参画推進",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0127",
+      "unit_id": "u015",
+      "unit_name": "企画市民協働班",
+      "seq": 4,
+      "text": "自治公民館",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0128",
+      "unit_id": "u015",
+      "unit_name": "企画市民協働班",
+      "seq": 5,
+      "text": "まちづくり協議会",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0129",
+      "unit_id": "u015",
+      "unit_name": "企画市民協働班",
+      "seq": 6,
+      "text": "地域担当職員",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0130",
+      "unit_id": "u015",
+      "unit_name": "企画市民協働班",
+      "seq": 7,
+      "text": "壱岐市地域協議会",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0131",
+      "unit_id": "u015",
+      "unit_name": "企画市民協働班",
+      "seq": 8,
+      "text": "その他地域の活性化を図る上で必要とすること",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0132",
+      "unit_id": "u015",
+      "unit_name": "企画市民協働班",
+      "seq": 9,
+      "text": "パブリックコメント",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0133",
+      "unit_id": "u015",
+      "unit_name": "企画市民協働班",
+      "seq": 10,
+      "text": "地域振興施策",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0134",
+      "unit_id": "u015",
+      "unit_name": "企画市民協働班",
+      "seq": 11,
+      "text": "国土利用計画策定",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0135",
+      "unit_id": "u015",
+      "unit_name": "企画市民協働班",
+      "seq": 12,
+      "text": "再生可能エネルギー",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0136",
+      "unit_id": "u015",
+      "unit_name": "企画市民協働班",
+      "seq": 13,
+      "text": "行政資料の収集、調査、解析及び提供",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0137",
+      "unit_id": "u015",
+      "unit_name": "企画市民協働班",
+      "seq": 14,
+      "text": "計数資料の管理",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0138",
+      "unit_id": "u015",
+      "unit_name": "企画市民協働班",
+      "seq": 15,
+      "text": "基幹統計",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0139",
+      "unit_id": "u015",
+      "unit_name": "企画市民協働班",
+      "seq": 16,
+      "text": "統計書等の編集及び発行",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0140",
+      "unit_id": "u015",
+      "unit_name": "企画市民協働班",
+      "seq": 17,
+      "text": "その他統計",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0141",
+      "unit_id": "u016",
+      "unit_name": "人口対策班",
+      "seq": 1,
+      "text": "重要施策の企画及び総合調整",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0142",
+      "unit_id": "u016",
+      "unit_name": "人口対策班",
+      "seq": 2,
+      "text": "地域創生・人口減少対策の総合調整",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0143",
+      "unit_id": "u016",
+      "unit_name": "人口対策班",
+      "seq": 3,
+      "text": "移住・定住促進",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0144",
+      "unit_id": "u016",
+      "unit_name": "人口対策班",
+      "seq": 4,
+      "text": "離島振興",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0145",
+      "unit_id": "u016",
+      "unit_name": "人口対策班",
+      "seq": 5,
+      "text": "結婚活動の支援",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0146",
+      "unit_id": "u016",
+      "unit_name": "人口対策班",
+      "seq": 6,
+      "text": "部の総括",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0147",
+      "unit_id": "u016",
+      "unit_name": "人口対策班",
+      "seq": 7,
+      "text": "課の庶務",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0148",
+      "unit_id": "u018",
+      "unit_name": "観光しまづくり班",
+      "seq": 1,
+      "text": "観光振興",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0149",
+      "unit_id": "u018",
+      "unit_name": "観光しまづくり班",
+      "seq": 2,
+      "text": "観光宣伝",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0150",
+      "unit_id": "u018",
+      "unit_name": "観光しまづくり班",
+      "seq": 3,
+      "text": "観光事業の発展及び改善",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0151",
+      "unit_id": "u018",
+      "unit_name": "観光しまづくり班",
+      "seq": 4,
+      "text": "観光施設の整備",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0152",
+      "unit_id": "u018",
+      "unit_name": "観光しまづくり班",
+      "seq": 5,
+      "text": "観光資源の保全開発",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0153",
+      "unit_id": "u018",
+      "unit_name": "観光しまづくり班",
+      "seq": 6,
+      "text": "観光連盟との連絡調整",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0154",
+      "unit_id": "u018",
+      "unit_name": "観光しまづくり班",
+      "seq": 7,
+      "text": "観光に関する諸統計",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0155",
+      "unit_id": "u018",
+      "unit_name": "観光しまづくり班",
+      "seq": 8,
+      "text": "国際化の推進及び国際交流",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0156",
+      "unit_id": "u018",
+      "unit_name": "観光しまづくり班",
+      "seq": 9,
+      "text": "施設の管理運営",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0157",
+      "unit_id": "u018",
+      "unit_name": "観光しまづくり班",
+      "seq": 10,
+      "text": "各種イベント",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0158",
+      "unit_id": "u018",
+      "unit_name": "観光しまづくり班",
+      "seq": 11,
+      "text": "自然公園法(昭和32年法律第161号)",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0159",
+      "unit_id": "u018",
+      "unit_name": "観光しまづくり班",
+      "seq": 12,
+      "text": "その他観光",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0160",
+      "unit_id": "u018",
+      "unit_name": "観光しまづくり班",
+      "seq": 13,
+      "text": "課の庶務",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0161",
+      "unit_id": "u020",
+      "unit_name": "文化振興班",
+      "seq": 1,
+      "text": "芸術文化及び芸能等文化の企画並びに振興",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0162",
+      "unit_id": "u020",
+      "unit_name": "文化振興班",
+      "seq": 2,
+      "text": "文化及び芸能等関係団体の指導育成",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0163",
+      "unit_id": "u020",
+      "unit_name": "文化振興班",
+      "seq": 3,
+      "text": "文化関連施設の管理運営",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0164",
+      "unit_id": "u020",
+      "unit_name": "文化振興班",
+      "seq": 4,
+      "text": "文化イベント及び交流事業",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0165",
+      "unit_id": "u020",
+      "unit_name": "文化振興班",
+      "seq": 5,
+      "text": "姉妹・友好都市交流",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0166",
+      "unit_id": "u020",
+      "unit_name": "文化振興班",
+      "seq": 6,
+      "text": "文化団体協議会及び文化協会",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0167",
+      "unit_id": "u020",
+      "unit_name": "文化振興班",
+      "seq": 7,
+      "text": "その他芸術文化振興",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0168",
+      "unit_id": "u021",
+      "unit_name": "スポーツ振興班",
+      "seq": 1,
+      "text": "スポーツの普及奨励及びその企画",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0169",
+      "unit_id": "u021",
+      "unit_name": "スポーツ振興班",
+      "seq": 2,
+      "text": "スポーツ及びレクリエーション団体等の指導育成",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0170",
+      "unit_id": "u021",
+      "unit_name": "スポーツ振興班",
+      "seq": 3,
+      "text": "スポーツ関連施設の管理運営",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0171",
+      "unit_id": "u021",
+      "unit_name": "スポーツ振興班",
+      "seq": 4,
+      "text": "ゴルフ場",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0172",
+      "unit_id": "u021",
+      "unit_name": "スポーツ振興班",
+      "seq": 5,
+      "text": "スポーツイベント及び交流事業",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0173",
+      "unit_id": "u021",
+      "unit_name": "スポーツ振興班",
+      "seq": 6,
+      "text": "B&G海洋センター事業",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0174",
+      "unit_id": "u021",
+      "unit_name": "スポーツ振興班",
+      "seq": 7,
+      "text": "全国離島交流中学生親善大会",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0175",
+      "unit_id": "u021",
+      "unit_name": "スポーツ振興班",
+      "seq": 8,
+      "text": "スポーツ推進委員",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0176",
+      "unit_id": "u021",
+      "unit_name": "スポーツ振興班",
+      "seq": 9,
+      "text": "スポーツ協会",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0177",
+      "unit_id": "u021",
+      "unit_name": "スポーツ振興班",
+      "seq": 10,
+      "text": "その他スポーツ振興",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0178",
+      "unit_id": "u022",
+      "unit_name": "文化財班",
+      "seq": 1,
+      "text": "文化財保護審議会",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0179",
+      "unit_id": "u022",
+      "unit_name": "文化財班",
+      "seq": 2,
+      "text": "文化財保護顕彰",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0180",
+      "unit_id": "u022",
+      "unit_name": "文化財班",
+      "seq": 3,
+      "text": "埋蔵文化財の調査事業",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0181",
+      "unit_id": "u022",
+      "unit_name": "文化財班",
+      "seq": 4,
+      "text": "文化財団体の指導育成",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0182",
+      "unit_id": "u022",
+      "unit_name": "文化財班",
+      "seq": 5,
+      "text": "文化財関連施設の管理運営",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0183",
+      "unit_id": "u022",
+      "unit_name": "文化財班",
+      "seq": 6,
+      "text": "文化財に属する財産の管理等",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0184",
+      "unit_id": "u022",
+      "unit_name": "文化財班",
+      "seq": 7,
+      "text": "その他文化財",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0185",
+      "unit_id": "u023",
+      "unit_name": "市民部",
+      "seq": 1,
+      "text": "戸籍及び住民基本台帳",
+      "legal_source": "jorei",
+      "article": "条例第1条・第2条"
+    },
+    {
+      "id": "d0186",
+      "unit_id": "u023",
+      "unit_name": "市民部",
+      "seq": 2,
+      "text": "社会福祉(高齢者福祉を除く)",
+      "legal_source": "jorei",
+      "article": "条例第1条・第2条"
+    },
+    {
+      "id": "d0187",
+      "unit_id": "u023",
+      "unit_name": "市民部",
+      "seq": 3,
+      "text": "市民生活",
+      "legal_source": "jorei",
+      "article": "条例第1条・第2条"
+    },
+    {
+      "id": "d0188",
+      "unit_id": "u023",
+      "unit_name": "市民部",
+      "seq": 4,
+      "text": "生活保護",
+      "legal_source": "jorei",
+      "article": "条例第1条・第2条"
+    },
+    {
+      "id": "d0189",
+      "unit_id": "u023",
+      "unit_name": "市民部",
+      "seq": 5,
+      "text": "税",
+      "legal_source": "jorei",
+      "article": "条例第1条・第2条"
+    },
+    {
+      "id": "d0190",
+      "unit_id": "u025",
+      "unit_name": "市民班",
+      "seq": 1,
+      "text": "支所市民生活班との調整",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0191",
+      "unit_id": "u025",
+      "unit_name": "市民班",
+      "seq": 2,
+      "text": "戸籍及び住民基本台帳に関する届出、申請及び受付",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0192",
+      "unit_id": "u025",
+      "unit_name": "市民班",
+      "seq": 3,
+      "text": "戸籍及び住民票の謄・抄本並びに証明",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0193",
+      "unit_id": "u025",
+      "unit_name": "市民班",
+      "seq": 4,
+      "text": "個人番号カードの交付及び公的個人認証事務",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0194",
+      "unit_id": "u025",
+      "unit_name": "市民班",
+      "seq": 5,
+      "text": "印鑑登録及び証明",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0195",
+      "unit_id": "u025",
+      "unit_name": "市民班",
+      "seq": 6,
+      "text": "異動処理",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0196",
+      "unit_id": "u025",
+      "unit_name": "市民班",
+      "seq": 7,
+      "text": "諸証明",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0197",
+      "unit_id": "u025",
+      "unit_name": "市民班",
+      "seq": 8,
+      "text": "戸籍届書及び住民基本台帳の閲覧",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0198",
+      "unit_id": "u025",
+      "unit_name": "市民班",
+      "seq": 9,
+      "text": "埋火葬等の許可",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0199",
+      "unit_id": "u025",
+      "unit_name": "市民班",
+      "seq": 10,
+      "text": "船員法に基づく雇入等契約の公認申請及び船員手帳の交付等",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0200",
+      "unit_id": "u025",
+      "unit_name": "市民班",
+      "seq": 11,
+      "text": "人口の動態",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0201",
+      "unit_id": "u025",
+      "unit_name": "市民班",
+      "seq": 12,
+      "text": "身分証明",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0202",
+      "unit_id": "u025",
+      "unit_name": "市民班",
+      "seq": 13,
+      "text": "犯罪人名簿",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0203",
+      "unit_id": "u025",
+      "unit_name": "市民班",
+      "seq": 14,
+      "text": "相続税法第58条の規定による通知",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0204",
+      "unit_id": "u025",
+      "unit_name": "市民班",
+      "seq": 15,
+      "text": "自動車の臨時運行許可及び封印",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0205",
+      "unit_id": "u025",
+      "unit_name": "市民班",
+      "seq": 16,
+      "text": "その他窓口業務",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0206",
+      "unit_id": "u026",
+      "unit_name": "地域福祉班",
+      "seq": 1,
+      "text": "福祉行政の総合的な企画及び調整",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0207",
+      "unit_id": "u026",
+      "unit_name": "地域福祉班",
+      "seq": 2,
+      "text": "地域福祉",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0208",
+      "unit_id": "u026",
+      "unit_name": "地域福祉班",
+      "seq": 3,
+      "text": "援護",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0209",
+      "unit_id": "u026",
+      "unit_name": "地域福祉班",
+      "seq": 4,
+      "text": "災害救助法",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0210",
+      "unit_id": "u026",
+      "unit_name": "地域福祉班",
+      "seq": 5,
+      "text": "福祉統計",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0211",
+      "unit_id": "u026",
+      "unit_name": "地域福祉班",
+      "seq": 6,
+      "text": "各種募金",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0212",
+      "unit_id": "u026",
+      "unit_name": "地域福祉班",
+      "seq": 7,
+      "text": "課及び福祉事務所の予算の総合調整",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0213",
+      "unit_id": "u026",
+      "unit_name": "地域福祉班",
+      "seq": 8,
+      "text": "各種福祉施設の管理運営",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0214",
+      "unit_id": "u026",
+      "unit_name": "地域福祉班",
+      "seq": 9,
+      "text": "民生委員及び児童委員",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0215",
+      "unit_id": "u026",
+      "unit_name": "地域福祉班",
+      "seq": 10,
+      "text": "社会福祉法人",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0216",
+      "unit_id": "u026",
+      "unit_name": "地域福祉班",
+      "seq": 11,
+      "text": "身体障害者(児)福祉",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0217",
+      "unit_id": "u026",
+      "unit_name": "地域福祉班",
+      "seq": 12,
+      "text": "精神障害者福祉",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0218",
+      "unit_id": "u026",
+      "unit_name": "地域福祉班",
+      "seq": 13,
+      "text": "知的障害者(児)福祉",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0219",
+      "unit_id": "u026",
+      "unit_name": "地域福祉班",
+      "seq": 14,
+      "text": "特別障害者手当、障害児福祉手当及び福祉手当",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0220",
+      "unit_id": "u026",
+      "unit_name": "地域福祉班",
+      "seq": 15,
+      "text": "地域生活ホーム",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0221",
+      "unit_id": "u026",
+      "unit_name": "地域福祉班",
+      "seq": 16,
+      "text": "障害者地域活動支援センター",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0222",
+      "unit_id": "u026",
+      "unit_name": "地域福祉班",
+      "seq": 17,
+      "text": "障害者福祉医療",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0223",
+      "unit_id": "u026",
+      "unit_name": "地域福祉班",
+      "seq": 18,
+      "text": "更正医療",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0224",
+      "unit_id": "u026",
+      "unit_name": "地域福祉班",
+      "seq": 19,
+      "text": "障害福祉サービス",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0225",
+      "unit_id": "u026",
+      "unit_name": "地域福祉班",
+      "seq": 20,
+      "text": "部の総括",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0226",
+      "unit_id": "u026",
+      "unit_name": "地域福祉班",
+      "seq": 21,
+      "text": "課の庶務",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0227",
+      "unit_id": "u028",
+      "unit_name": "幼保連携推進班",
+      "seq": 1,
+      "text": "保育所",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0228",
+      "unit_id": "u028",
+      "unit_name": "幼保連携推進班",
+      "seq": 2,
+      "text": "保育所及び幼稚園との連携",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0229",
+      "unit_id": "u028",
+      "unit_name": "幼保連携推進班",
+      "seq": 3,
+      "text": "子ども・子育て会議",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0230",
+      "unit_id": "u029",
+      "unit_name": "こども支援班",
+      "seq": 1,
+      "text": "福祉医療費助成(乳幼児・こども・母子・父子・寡婦)",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0231",
+      "unit_id": "u029",
+      "unit_name": "こども支援班",
+      "seq": 2,
+      "text": "児童手当、児童扶養手当及び特別児童扶養手当",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0232",
+      "unit_id": "u029",
+      "unit_name": "こども支援班",
+      "seq": 3,
+      "text": "放課後児童健全育成事業",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0233",
+      "unit_id": "u029",
+      "unit_name": "こども支援班",
+      "seq": 4,
+      "text": "地域子育て支援拠点事業",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0234",
+      "unit_id": "u029",
+      "unit_name": "こども支援班",
+      "seq": 5,
+      "text": "課の庶務",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0235",
+      "unit_id": "u030",
+      "unit_name": "こども家庭センター",
+      "seq": 1,
+      "text": "児童福祉と母子保健の一体的な支援",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0236",
+      "unit_id": "u030",
+      "unit_name": "こども家庭センター",
+      "seq": 2,
+      "text": "児童福祉",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0237",
+      "unit_id": "u030",
+      "unit_name": "こども家庭センター",
+      "seq": 3,
+      "text": "母子・父子及び寡婦福祉",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0238",
+      "unit_id": "u030",
+      "unit_name": "こども家庭センター",
+      "seq": 4,
+      "text": "こどもの居場所づくり",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0239",
+      "unit_id": "u030",
+      "unit_name": "こども家庭センター",
+      "seq": 5,
+      "text": "壱岐こどもセンター",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0240",
+      "unit_id": "u030",
+      "unit_name": "こども家庭センター",
+      "seq": 6,
+      "text": "医療的ケア児の相談",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0241",
+      "unit_id": "u030",
+      "unit_name": "こども家庭センター",
+      "seq": 7,
+      "text": "母子保健",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0242",
+      "unit_id": "u030",
+      "unit_name": "こども家庭センター",
+      "seq": 8,
+      "text": "その他子育て支援",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0243",
+      "unit_id": "u032",
+      "unit_name": "保護班",
+      "seq": 1,
+      "text": "生活保護法の施行(保護金品の支払を除く)",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0244",
+      "unit_id": "u032",
+      "unit_name": "保護班",
+      "seq": 2,
+      "text": "精神保健及び精神障害者福祉に関する法律の規定に基づく措置(被生活保護者の措置に限る)",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0245",
+      "unit_id": "u032",
+      "unit_name": "保護班",
+      "seq": 3,
+      "text": "介護・医療券の発行",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0246",
+      "unit_id": "u033",
+      "unit_name": "保護給付班",
+      "seq": 1,
+      "text": "保護金品の支払",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0247",
+      "unit_id": "u033",
+      "unit_name": "保護給付班",
+      "seq": 2,
+      "text": "行旅病人及び行旅死亡人並びに行旅困窮者の取扱い",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0248",
+      "unit_id": "u033",
+      "unit_name": "保護給付班",
+      "seq": 3,
+      "text": "課の庶務及び経理",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0249",
+      "unit_id": "u035",
+      "unit_name": "市民税班",
+      "seq": 1,
+      "text": "税務の総合調整",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0250",
+      "unit_id": "u035",
+      "unit_name": "市民税班",
+      "seq": 2,
+      "text": "個人市民税の賦課調定",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0251",
+      "unit_id": "u035",
+      "unit_name": "市民税班",
+      "seq": 3,
+      "text": "法人市民税の賦課調定",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0252",
+      "unit_id": "u035",
+      "unit_name": "市民税班",
+      "seq": 4,
+      "text": "国民健康保険税の賦課調定",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0253",
+      "unit_id": "u035",
+      "unit_name": "市民税班",
+      "seq": 5,
+      "text": "軽自動車税及び市たばこ税の賦課調定",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0254",
+      "unit_id": "u035",
+      "unit_name": "市民税班",
+      "seq": 6,
+      "text": "入湯税",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0255",
+      "unit_id": "u035",
+      "unit_name": "市民税班",
+      "seq": 7,
+      "text": "原動機付自転車及び小型特殊自動車の標識の交付",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0256",
+      "unit_id": "u035",
+      "unit_name": "市民税班",
+      "seq": 8,
+      "text": "証明",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0257",
+      "unit_id": "u035",
+      "unit_name": "市民税班",
+      "seq": 9,
+      "text": "市民税の統計",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0258",
+      "unit_id": "u035",
+      "unit_name": "市民税班",
+      "seq": 10,
+      "text": "課税資料の収集及び課税台帳の整理保管",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0259",
+      "unit_id": "u035",
+      "unit_name": "市民税班",
+      "seq": 11,
+      "text": "その他市税",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0260",
+      "unit_id": "u036",
+      "unit_name": "資産税班",
+      "seq": 1,
+      "text": "固定資産税の賦課調定",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0261",
+      "unit_id": "u036",
+      "unit_name": "資産税班",
+      "seq": 2,
+      "text": "家屋課税台帳及び家屋課税補充台帳並びに名寄帳",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0262",
+      "unit_id": "u036",
+      "unit_name": "資産税班",
+      "seq": 3,
+      "text": "土地課税台帳及び土地課税補充台帳並びに名寄帳",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0263",
+      "unit_id": "u036",
+      "unit_name": "資産税班",
+      "seq": 4,
+      "text": "償却資産",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0264",
+      "unit_id": "u036",
+      "unit_name": "資産税班",
+      "seq": 5,
+      "text": "証明",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0265",
+      "unit_id": "u036",
+      "unit_name": "資産税班",
+      "seq": 6,
+      "text": "国有資産等所在市町村交付金",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0266",
+      "unit_id": "u036",
+      "unit_name": "資産税班",
+      "seq": 7,
+      "text": "固定資産税の統計",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0267",
+      "unit_id": "u036",
+      "unit_name": "資産税班",
+      "seq": 8,
+      "text": "土地及び家屋の異動処理",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0268",
+      "unit_id": "u036",
+      "unit_name": "資産税班",
+      "seq": 9,
+      "text": "公簿の閲覧及び証明",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0269",
+      "unit_id": "u036",
+      "unit_name": "資産税班",
+      "seq": 10,
+      "text": "土地の調査及び評価",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0270",
+      "unit_id": "u036",
+      "unit_name": "資産税班",
+      "seq": 11,
+      "text": "家屋の調査及び評価",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0271",
+      "unit_id": "u036",
+      "unit_name": "資産税班",
+      "seq": 12,
+      "text": "その他資産税",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0272",
+      "unit_id": "u038",
+      "unit_name": "債権管理班",
+      "seq": 1,
+      "text": "債権管理の一元化の推進",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0273",
+      "unit_id": "u038",
+      "unit_name": "債権管理班",
+      "seq": 2,
+      "text": "後期高齢者保険料の徴収",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0274",
+      "unit_id": "u038",
+      "unit_name": "債権管理班",
+      "seq": 3,
+      "text": "介護保険料の徴収",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0275",
+      "unit_id": "u038",
+      "unit_name": "債権管理班",
+      "seq": 4,
+      "text": "滞納処分、差押え、その他強制執行",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0276",
+      "unit_id": "u038",
+      "unit_name": "債権管理班",
+      "seq": 5,
+      "text": "非強制徴収債権の債権整理",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0277",
+      "unit_id": "u038",
+      "unit_name": "債権管理班",
+      "seq": 6,
+      "text": "その他債権管理",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0278",
+      "unit_id": "u039",
+      "unit_name": "納税特別対策班",
+      "seq": 1,
+      "text": "市民税及び県民税の納税",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0279",
+      "unit_id": "u039",
+      "unit_name": "納税特別対策班",
+      "seq": 2,
+      "text": "県民税の払込み",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0280",
+      "unit_id": "u039",
+      "unit_name": "納税特別対策班",
+      "seq": 3,
+      "text": "固定資産税の納税",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0281",
+      "unit_id": "u039",
+      "unit_name": "納税特別対策班",
+      "seq": 4,
+      "text": "国民健康保険税の納税",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0282",
+      "unit_id": "u039",
+      "unit_name": "納税特別対策班",
+      "seq": 5,
+      "text": "滞納処分及び差押え",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0283",
+      "unit_id": "u039",
+      "unit_name": "納税特別対策班",
+      "seq": 6,
+      "text": "その他納税",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0284",
+      "unit_id": "u039",
+      "unit_name": "納税特別対策班",
+      "seq": 7,
+      "text": "課の庶務",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0285",
+      "unit_id": "u040",
+      "unit_name": "保健環境部",
+      "seq": 1,
+      "text": "市民の健康",
+      "legal_source": "jorei",
+      "article": "条例第1条・第2条"
+    },
+    {
+      "id": "d0286",
+      "unit_id": "u040",
+      "unit_name": "保健環境部",
+      "seq": 2,
+      "text": "高齢者福祉",
+      "legal_source": "jorei",
+      "article": "条例第1条・第2条"
+    },
+    {
+      "id": "d0287",
+      "unit_id": "u040",
+      "unit_name": "保健環境部",
+      "seq": 3,
+      "text": "国民健康保険、後期高齢者医療及び国民年金",
+      "legal_source": "jorei",
+      "article": "条例第1条・第2条"
+    },
+    {
+      "id": "d0288",
+      "unit_id": "u040",
+      "unit_name": "保健環境部",
+      "seq": 4,
+      "text": "介護保険",
+      "legal_source": "jorei",
+      "article": "条例第1条・第2条"
+    },
+    {
+      "id": "d0289",
+      "unit_id": "u040",
+      "unit_name": "保健環境部",
+      "seq": 5,
+      "text": "環境衛生",
+      "legal_source": "jorei",
+      "article": "条例第1条・第2条"
+    },
+    {
+      "id": "d0290",
+      "unit_id": "u040",
+      "unit_name": "保健環境部",
+      "seq": 6,
+      "text": "廃棄物対策",
+      "legal_source": "jorei",
+      "article": "条例第1条・第2条"
+    },
+    {
+      "id": "d0291",
+      "unit_id": "u042",
+      "unit_name": "国保・後期・年金班",
+      "seq": 1,
+      "text": "国民健康保険事業特別会計",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0292",
+      "unit_id": "u042",
+      "unit_name": "国保・後期・年金班",
+      "seq": 2,
+      "text": "国民健康保険被保険者の資格",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0293",
+      "unit_id": "u042",
+      "unit_name": "国保・後期・年金班",
+      "seq": 3,
+      "text": "国民健康保険の給付",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0294",
+      "unit_id": "u042",
+      "unit_name": "国保・後期・年金班",
+      "seq": 4,
+      "text": "国民健康保険の保健事業(事務)",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0295",
+      "unit_id": "u042",
+      "unit_name": "国保・後期・年金班",
+      "seq": 5,
+      "text": "国民健康保険の補助申請",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0296",
+      "unit_id": "u042",
+      "unit_name": "国保・後期・年金班",
+      "seq": 6,
+      "text": "国民健康保険運営協議会",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0297",
+      "unit_id": "u042",
+      "unit_name": "国保・後期・年金班",
+      "seq": 7,
+      "text": "直営診療所運営",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0298",
+      "unit_id": "u042",
+      "unit_name": "国保・後期・年金班",
+      "seq": 8,
+      "text": "後期高齢者医療特別会計",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0299",
+      "unit_id": "u042",
+      "unit_name": "国保・後期・年金班",
+      "seq": 9,
+      "text": "後期高齢者医療被保険者の資格管理",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0300",
+      "unit_id": "u042",
+      "unit_name": "国保・後期・年金班",
+      "seq": 10,
+      "text": "後期高齢者医療の給付の受付",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0301",
+      "unit_id": "u042",
+      "unit_name": "国保・後期・年金班",
+      "seq": 11,
+      "text": "後期高齢者保険料の賦課徴収",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0302",
+      "unit_id": "u042",
+      "unit_name": "国保・後期・年金班",
+      "seq": 12,
+      "text": "後期高齢者の保健事業(事務)",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0303",
+      "unit_id": "u042",
+      "unit_name": "国保・後期・年金班",
+      "seq": 13,
+      "text": "後期高齢者医療の補助申請",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0304",
+      "unit_id": "u042",
+      "unit_name": "国保・後期・年金班",
+      "seq": 14,
+      "text": "レセプト点検",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0305",
+      "unit_id": "u042",
+      "unit_name": "国保・後期・年金班",
+      "seq": 15,
+      "text": "国民年金",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0306",
+      "unit_id": "u042",
+      "unit_name": "国保・後期・年金班",
+      "seq": 16,
+      "text": "年金事務所等との連絡調整",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0307",
+      "unit_id": "u042",
+      "unit_name": "国保・後期・年金班",
+      "seq": 17,
+      "text": "その他国民健康保険、後期高齢者医療及び国民年金",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0308",
+      "unit_id": "u042",
+      "unit_name": "国保・後期・年金班",
+      "seq": 18,
+      "text": "地域医療及び長崎県病院企業団",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0309",
+      "unit_id": "u042",
+      "unit_name": "国保・後期・年金班",
+      "seq": 19,
+      "text": "部の総括",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0310",
+      "unit_id": "u042",
+      "unit_name": "国保・後期・年金班",
+      "seq": 20,
+      "text": "課の庶務",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0311",
+      "unit_id": "u043",
+      "unit_name": "介護保険班",
+      "seq": 1,
+      "text": "介護保険事業特別会計",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0312",
+      "unit_id": "u043",
+      "unit_name": "介護保険班",
+      "seq": 2,
+      "text": "介護保険被保険者の資格",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0313",
+      "unit_id": "u043",
+      "unit_name": "介護保険班",
+      "seq": 3,
+      "text": "介護保険の要介護及び要支援の認定",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0314",
+      "unit_id": "u043",
+      "unit_name": "介護保険班",
+      "seq": 4,
+      "text": "介護認定審査会",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0315",
+      "unit_id": "u043",
+      "unit_name": "介護保険班",
+      "seq": 5,
+      "text": "介護保険の給付",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0316",
+      "unit_id": "u043",
+      "unit_name": "介護保険班",
+      "seq": 6,
+      "text": "介護保険料の賦課徴収",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0317",
+      "unit_id": "u043",
+      "unit_name": "介護保険班",
+      "seq": 7,
+      "text": "介護保険の補助申請",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0318",
+      "unit_id": "u043",
+      "unit_name": "介護保険班",
+      "seq": 8,
+      "text": "介護保険事業計画",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0319",
+      "unit_id": "u043",
+      "unit_name": "介護保険班",
+      "seq": 9,
+      "text": "介護事業者の指定・指導監督",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0320",
+      "unit_id": "u043",
+      "unit_name": "介護保険班",
+      "seq": 10,
+      "text": "介護保険適正化事業",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0321",
+      "unit_id": "u043",
+      "unit_name": "介護保険班",
+      "seq": 11,
+      "text": "介護人材確保",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0322",
+      "unit_id": "u043",
+      "unit_name": "介護保険班",
+      "seq": 12,
+      "text": "その他介護保険",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0323",
+      "unit_id": "u045",
+      "unit_name": "長寿福祉班",
+      "seq": 1,
+      "text": "高齢者福祉",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0324",
+      "unit_id": "u045",
+      "unit_name": "長寿福祉班",
+      "seq": 2,
+      "text": "高齢者の生きがい対策",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0325",
+      "unit_id": "u045",
+      "unit_name": "長寿福祉班",
+      "seq": 3,
+      "text": "高齢者の総合相談支援",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0326",
+      "unit_id": "u045",
+      "unit_name": "長寿福祉班",
+      "seq": 4,
+      "text": "老人福祉施設",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0327",
+      "unit_id": "u045",
+      "unit_name": "長寿福祉班",
+      "seq": 5,
+      "text": "老人福祉法に基づく入所等の措置",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0328",
+      "unit_id": "u045",
+      "unit_name": "長寿福祉班",
+      "seq": 6,
+      "text": "老人福祉法に基づく施設",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0329",
+      "unit_id": "u046",
+      "unit_name": "地域包括支援センター",
+      "seq": 1,
+      "text": "地域支援事業",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0330",
+      "unit_id": "u046",
+      "unit_name": "地域包括支援センター",
+      "seq": 2,
+      "text": "介護予防・日常生活支援総合事業",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0331",
+      "unit_id": "u046",
+      "unit_name": "地域包括支援センター",
+      "seq": 3,
+      "text": "指定介護予防支援",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0332",
+      "unit_id": "u046",
+      "unit_name": "地域包括支援センター",
+      "seq": 4,
+      "text": "地域包括ケア",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0333",
+      "unit_id": "u046",
+      "unit_name": "地域包括支援センター",
+      "seq": 5,
+      "text": "認知症施策",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0334",
+      "unit_id": "u046",
+      "unit_name": "地域包括支援センター",
+      "seq": 6,
+      "text": "地域包括支援センター運営協議会",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0335",
+      "unit_id": "u046",
+      "unit_name": "地域包括支援センター",
+      "seq": 7,
+      "text": "その他介護予防",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0336",
+      "unit_id": "u046",
+      "unit_name": "地域包括支援センター",
+      "seq": 8,
+      "text": "後期高齢者の保健事業(事務を除く)",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0337",
+      "unit_id": "u048",
+      "unit_name": "健康増進班",
+      "seq": 1,
+      "text": "健康増進事業",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0338",
+      "unit_id": "u048",
+      "unit_name": "健康増進班",
+      "seq": 2,
+      "text": "栄養事業(食品衛生を含む)",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0339",
+      "unit_id": "u048",
+      "unit_name": "健康増進班",
+      "seq": 3,
+      "text": "精神保健事業",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0340",
+      "unit_id": "u048",
+      "unit_name": "健康増進班",
+      "seq": 4,
+      "text": "感染症対策(予防接種を含む)",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0341",
+      "unit_id": "u048",
+      "unit_name": "健康増進班",
+      "seq": 5,
+      "text": "歯科保健事業",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0342",
+      "unit_id": "u048",
+      "unit_name": "健康増進班",
+      "seq": 6,
+      "text": "国民健康保険保健事業(特定健診、特定保健指導及び重症化予防)",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0343",
+      "unit_id": "u048",
+      "unit_name": "健康増進班",
+      "seq": 7,
+      "text": "へき地医療",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0344",
+      "unit_id": "u048",
+      "unit_name": "健康増進班",
+      "seq": 8,
+      "text": "救急医療",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0345",
+      "unit_id": "u048",
+      "unit_name": "健康増進班",
+      "seq": 9,
+      "text": "原爆被爆者対策",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0346",
+      "unit_id": "u048",
+      "unit_name": "健康増進班",
+      "seq": 10,
+      "text": "献血事業",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0347",
+      "unit_id": "u048",
+      "unit_name": "健康増進班",
+      "seq": 11,
+      "text": "健康危機管理対策",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0348",
+      "unit_id": "u048",
+      "unit_name": "健康増進班",
+      "seq": 12,
+      "text": "保健計画",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0349",
+      "unit_id": "u048",
+      "unit_name": "健康増進班",
+      "seq": 13,
+      "text": "その他健康増進",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0350",
+      "unit_id": "u048",
+      "unit_name": "健康増進班",
+      "seq": 14,
+      "text": "課の庶務",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0351",
+      "unit_id": "u050",
+      "unit_name": "環境衛生班",
+      "seq": 1,
+      "text": "環境保全の計画",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0352",
+      "unit_id": "u050",
+      "unit_name": "環境衛生班",
+      "seq": 2,
+      "text": "一般廃棄物処理施設の総合管理運営",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0353",
+      "unit_id": "u050",
+      "unit_name": "環境衛生班",
+      "seq": 3,
+      "text": "一般廃棄物収集の許可",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0354",
+      "unit_id": "u050",
+      "unit_name": "環境衛生班",
+      "seq": 4,
+      "text": "ごみ収集",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0355",
+      "unit_id": "u050",
+      "unit_name": "環境衛生班",
+      "seq": 5,
+      "text": "不法投棄",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0356",
+      "unit_id": "u050",
+      "unit_name": "環境衛生班",
+      "seq": 6,
+      "text": "海岸漂着物",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0357",
+      "unit_id": "u050",
+      "unit_name": "環境衛生班",
+      "seq": 7,
+      "text": "生ゴミ処理機購入費補助",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0358",
+      "unit_id": "u050",
+      "unit_name": "環境衛生班",
+      "seq": 8,
+      "text": "公害対策",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0359",
+      "unit_id": "u050",
+      "unit_name": "環境衛生班",
+      "seq": 9,
+      "text": "地球温暖化",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0360",
+      "unit_id": "u050",
+      "unit_name": "環境衛生班",
+      "seq": 10,
+      "text": "墓地経営許可",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0361",
+      "unit_id": "u050",
+      "unit_name": "環境衛生班",
+      "seq": 11,
+      "text": "リサイクル事業の推進、指導並びに計画、実施",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0362",
+      "unit_id": "u050",
+      "unit_name": "環境衛生班",
+      "seq": 12,
+      "text": "犬の登録及び狂犬病対策",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0363",
+      "unit_id": "u050",
+      "unit_name": "環境衛生班",
+      "seq": 13,
+      "text": "野犬対策",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0364",
+      "unit_id": "u050",
+      "unit_name": "環境衛生班",
+      "seq": 14,
+      "text": "犬の里親制度",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0365",
+      "unit_id": "u050",
+      "unit_name": "環境衛生班",
+      "seq": 15,
+      "text": "壱岐市葬祭場の管理運営",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0366",
+      "unit_id": "u050",
+      "unit_name": "環境衛生班",
+      "seq": 16,
+      "text": "その他環境衛生",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0367",
+      "unit_id": "u050",
+      "unit_name": "環境衛生班",
+      "seq": 17,
+      "text": "課の庶務",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0368",
+      "unit_id": "u051",
+      "unit_name": "廃棄物対策班",
+      "seq": 1,
+      "text": "一般廃棄物処理基本計画及びその実施計画",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0369",
+      "unit_id": "u051",
+      "unit_name": "廃棄物対策班",
+      "seq": 2,
+      "text": "一般廃棄物処理施設の整備計画",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0370",
+      "unit_id": "u051",
+      "unit_name": "廃棄物対策班",
+      "seq": 3,
+      "text": "その他一般廃棄物対策",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0371",
+      "unit_id": "u052",
+      "unit_name": "産業推進部",
+      "seq": 1,
+      "text": "農業、林業及び畜産業",
+      "legal_source": "jorei",
+      "article": "条例第1条・第2条"
+    },
+    {
+      "id": "d0372",
+      "unit_id": "u052",
+      "unit_name": "産業推進部",
+      "seq": 2,
+      "text": "農村整備",
+      "legal_source": "jorei",
+      "article": "条例第1条・第2条"
+    },
+    {
+      "id": "d0373",
+      "unit_id": "u052",
+      "unit_name": "産業推進部",
+      "seq": 3,
+      "text": "水産",
+      "legal_source": "jorei",
+      "article": "条例第1条・第2条"
+    },
+    {
+      "id": "d0374",
+      "unit_id": "u052",
+      "unit_name": "産業推進部",
+      "seq": 4,
+      "text": "漁港及び港湾",
+      "legal_source": "jorei",
+      "article": "条例第1条・第2条"
+    },
+    {
+      "id": "d0375",
+      "unit_id": "u052",
+      "unit_name": "産業推進部",
+      "seq": 5,
+      "text": "ふるさと納税",
+      "legal_source": "jorei",
+      "article": "条例第1条・第2条"
+    },
+    {
+      "id": "d0376",
+      "unit_id": "u052",
+      "unit_name": "産業推進部",
+      "seq": 6,
+      "text": "商工業、労働政策及び物産",
+      "legal_source": "jorei",
+      "article": "条例第1条・第2条"
+    },
+    {
+      "id": "d0377",
+      "unit_id": "u052",
+      "unit_name": "産業推進部",
+      "seq": 7,
+      "text": "企業誘致",
+      "legal_source": "jorei",
+      "article": "条例第1条・第2条"
+    },
+    {
+      "id": "d0378",
+      "unit_id": "u054",
+      "unit_name": "農業振興班",
+      "seq": 1,
+      "text": "農業の総合的な企画及び調整",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0379",
+      "unit_id": "u054",
+      "unit_name": "農業振興班",
+      "seq": 2,
+      "text": "農業振興地域の整備",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0380",
+      "unit_id": "u054",
+      "unit_name": "農業振興班",
+      "seq": 3,
+      "text": "農業経営基盤強化促進",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0381",
+      "unit_id": "u054",
+      "unit_name": "農業振興班",
+      "seq": 4,
+      "text": "農産物の生産及び流通の改善",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0382",
+      "unit_id": "u054",
+      "unit_name": "農業振興班",
+      "seq": 5,
+      "text": "主要食糧の生産及び流通",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0383",
+      "unit_id": "u054",
+      "unit_name": "農業振興班",
+      "seq": 6,
+      "text": "農業諸団体の育成",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0384",
+      "unit_id": "u054",
+      "unit_name": "農業振興班",
+      "seq": 7,
+      "text": "農事組合法人の届出の受理等",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0385",
+      "unit_id": "u054",
+      "unit_name": "農業振興班",
+      "seq": 8,
+      "text": "JAS法",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0386",
+      "unit_id": "u054",
+      "unit_name": "農業振興班",
+      "seq": 9,
+      "text": "病害虫の防除",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0387",
+      "unit_id": "u054",
+      "unit_name": "農業振興班",
+      "seq": 10,
+      "text": "鳥獣の保護及び狩猟",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0388",
+      "unit_id": "u054",
+      "unit_name": "農業振興班",
+      "seq": 11,
+      "text": "有害鳥獣の駆除",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0389",
+      "unit_id": "u054",
+      "unit_name": "農業振興班",
+      "seq": 12,
+      "text": "農業振興関連施設の管理運営",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0390",
+      "unit_id": "u054",
+      "unit_name": "農業振興班",
+      "seq": 13,
+      "text": "畜産業の振興",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0391",
+      "unit_id": "u054",
+      "unit_name": "農業振興班",
+      "seq": 14,
+      "text": "へい獣処理",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0392",
+      "unit_id": "u054",
+      "unit_name": "農業振興班",
+      "seq": 15,
+      "text": "家畜診療所との連絡調整",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0393",
+      "unit_id": "u054",
+      "unit_name": "農業振興班",
+      "seq": 16,
+      "text": "環境保全型直接支払交付金",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0394",
+      "unit_id": "u054",
+      "unit_name": "農業振興班",
+      "seq": 17,
+      "text": "その他農業振興",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0395",
+      "unit_id": "u054",
+      "unit_name": "農業振興班",
+      "seq": 18,
+      "text": "部の総括",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0396",
+      "unit_id": "u054",
+      "unit_name": "農業振興班",
+      "seq": 19,
+      "text": "課の庶務",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0397",
+      "unit_id": "u055",
+      "unit_name": "農林整備班",
+      "seq": 1,
+      "text": "土地改良事業",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0398",
+      "unit_id": "u055",
+      "unit_name": "農林整備班",
+      "seq": 2,
+      "text": "土地改良事業(95条)の許認可",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0399",
+      "unit_id": "u055",
+      "unit_name": "農林整備班",
+      "seq": 3,
+      "text": "農道及び林道の整備並びに管理",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0400",
+      "unit_id": "u055",
+      "unit_name": "農林整備班",
+      "seq": 4,
+      "text": "農業施設の台帳の整理",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0401",
+      "unit_id": "u055",
+      "unit_name": "農林整備班",
+      "seq": 5,
+      "text": "交換分合事業の許認可",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0402",
+      "unit_id": "u055",
+      "unit_name": "農林整備班",
+      "seq": 6,
+      "text": "換地事務及び交換分合事業",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0403",
+      "unit_id": "u055",
+      "unit_name": "農林整備班",
+      "seq": 7,
+      "text": "農業用水資源",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0404",
+      "unit_id": "u055",
+      "unit_name": "農林整備班",
+      "seq": 8,
+      "text": "農地防災事業",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0405",
+      "unit_id": "u055",
+      "unit_name": "農林整備班",
+      "seq": 9,
+      "text": "農地農業用施設等の災害復旧事業",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0406",
+      "unit_id": "u055",
+      "unit_name": "農林整備班",
+      "seq": 10,
+      "text": "農林海岸の保全",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0407",
+      "unit_id": "u055",
+      "unit_name": "農林整備班",
+      "seq": 11,
+      "text": "多面的機能支払交付金",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0408",
+      "unit_id": "u055",
+      "unit_name": "農林整備班",
+      "seq": 12,
+      "text": "中山間地域等直接支払制度",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0409",
+      "unit_id": "u055",
+      "unit_name": "農林整備班",
+      "seq": 13,
+      "text": "緑化推進",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0410",
+      "unit_id": "u055",
+      "unit_name": "農林整備班",
+      "seq": 14,
+      "text": "治山治水",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0411",
+      "unit_id": "u055",
+      "unit_name": "農林整備班",
+      "seq": 15,
+      "text": "森林環境譲与税",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0412",
+      "unit_id": "u055",
+      "unit_name": "農林整備班",
+      "seq": 16,
+      "text": "農業機械銀行",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0413",
+      "unit_id": "u055",
+      "unit_name": "農林整備班",
+      "seq": 17,
+      "text": "その他農林整備",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0414",
+      "unit_id": "u057",
+      "unit_name": "水産班",
+      "seq": 1,
+      "text": "水産業に係る総合的な企画及び調整",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0415",
+      "unit_id": "u057",
+      "unit_name": "水産班",
+      "seq": 2,
+      "text": "水産業に関する調査並びに情報の収集及び提供",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0416",
+      "unit_id": "u057",
+      "unit_name": "水産班",
+      "seq": 3,
+      "text": "沿岸漁業の振興",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0417",
+      "unit_id": "u057",
+      "unit_name": "水産班",
+      "seq": 4,
+      "text": "水産加工事業の振興",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0418",
+      "unit_id": "u057",
+      "unit_name": "水産班",
+      "seq": 5,
+      "text": "水産関係諸団体",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0419",
+      "unit_id": "u057",
+      "unit_name": "水産班",
+      "seq": 6,
+      "text": "水産関係施設の管理",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0420",
+      "unit_id": "u057",
+      "unit_name": "水産班",
+      "seq": 7,
+      "text": "漁場の造成",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0421",
+      "unit_id": "u057",
+      "unit_name": "水産班",
+      "seq": 8,
+      "text": "その他水産振興全般",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0422",
+      "unit_id": "u058",
+      "unit_name": "港湾漁港班",
+      "seq": 1,
+      "text": "漁港及び港湾の総合整備計画",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0423",
+      "unit_id": "u058",
+      "unit_name": "港湾漁港班",
+      "seq": 2,
+      "text": "漁村の総合整備計画",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0424",
+      "unit_id": "u058",
+      "unit_name": "港湾漁港班",
+      "seq": 3,
+      "text": "その他漁港及び港湾の整備",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0425",
+      "unit_id": "u059",
+      "unit_name": "管理班",
+      "seq": 1,
+      "text": "港湾及び漁港の維持管理",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0426",
+      "unit_id": "u059",
+      "unit_name": "管理班",
+      "seq": 2,
+      "text": "港湾及び漁港に関する各種統計",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0427",
+      "unit_id": "u059",
+      "unit_name": "管理班",
+      "seq": 3,
+      "text": "港湾・漁港台帳",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0428",
+      "unit_id": "u059",
+      "unit_name": "管理班",
+      "seq": 4,
+      "text": "ターミナルビルの総合的な管理運営",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0429",
+      "unit_id": "u059",
+      "unit_name": "管理班",
+      "seq": 5,
+      "text": "公有水面",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0430",
+      "unit_id": "u059",
+      "unit_name": "管理班",
+      "seq": 6,
+      "text": "プレジャーボート",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0431",
+      "unit_id": "u059",
+      "unit_name": "管理班",
+      "seq": 7,
+      "text": "砂利採取",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0432",
+      "unit_id": "u059",
+      "unit_name": "管理班",
+      "seq": 8,
+      "text": "課の庶務",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0433",
+      "unit_id": "u061",
+      "unit_name": "ふるさと振興班",
+      "seq": 1,
+      "text": "商工業の振興",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0434",
+      "unit_id": "u061",
+      "unit_name": "ふるさと振興班",
+      "seq": 2,
+      "text": "個人向けふるさと納税",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0435",
+      "unit_id": "u061",
+      "unit_name": "ふるさと振興班",
+      "seq": 3,
+      "text": "企業版ふるさと納税",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0436",
+      "unit_id": "u061",
+      "unit_name": "ふるさと振興班",
+      "seq": 4,
+      "text": "商店街の活性化",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0437",
+      "unit_id": "u061",
+      "unit_name": "ふるさと振興班",
+      "seq": 5,
+      "text": "中小企業振興制度",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0438",
+      "unit_id": "u061",
+      "unit_name": "ふるさと振興班",
+      "seq": 6,
+      "text": "工場立地法及び大規模小売店舗立地法",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0439",
+      "unit_id": "u061",
+      "unit_name": "ふるさと振興班",
+      "seq": 7,
+      "text": "物産振興",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0440",
+      "unit_id": "u061",
+      "unit_name": "ふるさと振興班",
+      "seq": 8,
+      "text": "壱岐市ふるさと商社",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0441",
+      "unit_id": "u061",
+      "unit_name": "ふるさと振興班",
+      "seq": 9,
+      "text": "焼酎振興",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0442",
+      "unit_id": "u061",
+      "unit_name": "ふるさと振興班",
+      "seq": 10,
+      "text": "商工施設の管理運営及び整備",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0443",
+      "unit_id": "u061",
+      "unit_name": "ふるさと振興班",
+      "seq": 11,
+      "text": "マリンパル壱岐",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0444",
+      "unit_id": "u061",
+      "unit_name": "ふるさと振興班",
+      "seq": 12,
+      "text": "課の庶務",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0445",
+      "unit_id": "u062",
+      "unit_name": "雇用対策班",
+      "seq": 1,
+      "text": "雇用機会拡充事業",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0446",
+      "unit_id": "u062",
+      "unit_name": "雇用対策班",
+      "seq": 2,
+      "text": "企業誘致",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0447",
+      "unit_id": "u062",
+      "unit_name": "雇用対策班",
+      "seq": 3,
+      "text": "雇用・労働行政",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0448",
+      "unit_id": "u062",
+      "unit_name": "雇用対策班",
+      "seq": 4,
+      "text": "協同組合及び協業組合の設立、認可等",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0449",
+      "unit_id": "u064",
+      "unit_name": "衛生指導班",
+      "seq": 1,
+      "text": "家畜の診療",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0450",
+      "unit_id": "u064",
+      "unit_name": "衛生指導班",
+      "seq": 2,
+      "text": "家畜の管理及び衛生指導",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0451",
+      "unit_id": "u064",
+      "unit_name": "衛生指導班",
+      "seq": 3,
+      "text": "その他家畜診療所の設置目的を達成するために必要な業務",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0452",
+      "unit_id": "u064",
+      "unit_name": "衛生指導班",
+      "seq": 4,
+      "text": "所の庶務",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0453",
+      "unit_id": "u065",
+      "unit_name": "防疫班",
+      "seq": 1,
+      "text": "家畜疾病の予防、診断及び治療",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0454",
+      "unit_id": "u065",
+      "unit_name": "防疫班",
+      "seq": 2,
+      "text": "医薬品、衛生資材の購入及び保管",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0455",
+      "unit_id": "u066",
+      "unit_name": "建設部",
+      "seq": 1,
+      "text": "土木工事及び用地",
+      "legal_source": "jorei",
+      "article": "条例第1条・第2条"
+    },
+    {
+      "id": "d0456",
+      "unit_id": "u066",
+      "unit_name": "建設部",
+      "seq": 2,
+      "text": "道路等の維持管理及び都市計画",
+      "legal_source": "jorei",
+      "article": "条例第1条・第2条"
+    },
+    {
+      "id": "d0457",
+      "unit_id": "u066",
+      "unit_name": "建設部",
+      "seq": 3,
+      "text": "地籍及び登記",
+      "legal_source": "jorei",
+      "article": "条例第1条・第2条"
+    },
+    {
+      "id": "d0458",
+      "unit_id": "u066",
+      "unit_name": "建設部",
+      "seq": 4,
+      "text": "市営住宅",
+      "legal_source": "jorei",
+      "article": "条例第1条・第2条"
+    },
+    {
+      "id": "d0459",
+      "unit_id": "u066",
+      "unit_name": "建設部",
+      "seq": 5,
+      "text": "建築監理及び危険家屋",
+      "legal_source": "jorei",
+      "article": "条例第1条・第2条"
+    },
+    {
+      "id": "d0460",
+      "unit_id": "u068",
+      "unit_name": "土木班",
+      "seq": 1,
+      "text": "道路、河川及び橋梁の整備",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0461",
+      "unit_id": "u068",
+      "unit_name": "土木班",
+      "seq": 2,
+      "text": "砂防及び急傾斜地",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0462",
+      "unit_id": "u068",
+      "unit_name": "土木班",
+      "seq": 3,
+      "text": "公園及び緑地の新設及び改良",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0463",
+      "unit_id": "u068",
+      "unit_name": "土木班",
+      "seq": 4,
+      "text": "開発許可事務",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0464",
+      "unit_id": "u068",
+      "unit_name": "土木班",
+      "seq": 5,
+      "text": "建設海岸保全",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0465",
+      "unit_id": "u068",
+      "unit_name": "土木班",
+      "seq": 6,
+      "text": "地すべり対策",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0466",
+      "unit_id": "u068",
+      "unit_name": "土木班",
+      "seq": 7,
+      "text": "公共土木災害復旧",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0467",
+      "unit_id": "u068",
+      "unit_name": "土木班",
+      "seq": 8,
+      "text": "土木設計積算システム",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0468",
+      "unit_id": "u068",
+      "unit_name": "土木班",
+      "seq": 9,
+      "text": "土木工事に伴う各種補償",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0469",
+      "unit_id": "u068",
+      "unit_name": "土木班",
+      "seq": 10,
+      "text": "その他土木工事",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0470",
+      "unit_id": "u069",
+      "unit_name": "管理土地対策班",
+      "seq": 1,
+      "text": "市道の認定、廃止及び変更",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0471",
+      "unit_id": "u069",
+      "unit_name": "管理土地対策班",
+      "seq": 2,
+      "text": "道路、河川、橋梁の管理及び台帳の整備",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0472",
+      "unit_id": "u069",
+      "unit_name": "管理土地対策班",
+      "seq": 3,
+      "text": "都市公園の管理及び台帳の整備",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0473",
+      "unit_id": "u069",
+      "unit_name": "管理土地対策班",
+      "seq": 4,
+      "text": "法定外公共物",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0474",
+      "unit_id": "u069",
+      "unit_name": "管理土地対策班",
+      "seq": 5,
+      "text": "道路、河川及び都市公園の占用",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0475",
+      "unit_id": "u069",
+      "unit_name": "管理土地対策班",
+      "seq": 6,
+      "text": "砂利採取及び採石業",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0476",
+      "unit_id": "u069",
+      "unit_name": "管理土地対策班",
+      "seq": 7,
+      "text": "景観まちづくり",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0477",
+      "unit_id": "u069",
+      "unit_name": "管理土地対策班",
+      "seq": 8,
+      "text": "都市計画",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0478",
+      "unit_id": "u069",
+      "unit_name": "管理土地対策班",
+      "seq": 9,
+      "text": "特殊車両通行許可",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0479",
+      "unit_id": "u069",
+      "unit_name": "管理土地対策班",
+      "seq": 10,
+      "text": "地籍及び登記",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0480",
+      "unit_id": "u069",
+      "unit_name": "管理土地対策班",
+      "seq": 11,
+      "text": "地図情報システム管理",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0481",
+      "unit_id": "u069",
+      "unit_name": "管理土地対策班",
+      "seq": 12,
+      "text": "その他用地",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0482",
+      "unit_id": "u069",
+      "unit_name": "管理土地対策班",
+      "seq": 13,
+      "text": "部の総括",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0483",
+      "unit_id": "u069",
+      "unit_name": "管理土地対策班",
+      "seq": 14,
+      "text": "課の庶務",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0484",
+      "unit_id": "u070",
+      "unit_name": "住宅班",
+      "seq": 1,
+      "text": "市営住宅入居者の募集及び選定",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0485",
+      "unit_id": "u070",
+      "unit_name": "住宅班",
+      "seq": 2,
+      "text": "市営住宅施設台帳の整備保管",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0486",
+      "unit_id": "u070",
+      "unit_name": "住宅班",
+      "seq": 3,
+      "text": "市営住宅の家賃の決定及び賦課徴収",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0487",
+      "unit_id": "u070",
+      "unit_name": "住宅班",
+      "seq": 4,
+      "text": "市営住宅の用途廃止",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0488",
+      "unit_id": "u070",
+      "unit_name": "住宅班",
+      "seq": 5,
+      "text": "市営住宅の整備",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0489",
+      "unit_id": "u070",
+      "unit_name": "住宅班",
+      "seq": 6,
+      "text": "市営住宅の維持管理",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0490",
+      "unit_id": "u071",
+      "unit_name": "建築整備班",
+      "seq": 1,
+      "text": "市有建築物の設計指導",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0491",
+      "unit_id": "u071",
+      "unit_name": "建築整備班",
+      "seq": 2,
+      "text": "市が建設する施設の監督及び指導",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0492",
+      "unit_id": "u071",
+      "unit_name": "建築整備班",
+      "seq": 3,
+      "text": "建築確認申請等の受付",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0493",
+      "unit_id": "u071",
+      "unit_name": "建築整備班",
+      "seq": 4,
+      "text": "危険家屋",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0494",
+      "unit_id": "u071",
+      "unit_name": "建築整備班",
+      "seq": 5,
+      "text": "その他建築",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0495",
+      "unit_id": "u073",
+      "unit_name": "水道班",
+      "seq": 1,
+      "text": "専用水道及び簡易専用水道",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0496",
+      "unit_id": "u074",
+      "unit_name": "下水道班",
+      "seq": 1,
+      "text": "公共下水道事業及び漁業集落排水整備事業",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0497",
+      "unit_id": "u074",
+      "unit_name": "下水道班",
+      "seq": 2,
+      "text": "合併処理浄化槽整備事業の総合計画",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0498",
+      "unit_id": "u074",
+      "unit_name": "下水道班",
+      "seq": 3,
+      "text": "合併処理浄化槽設置整備事業",
+      "legal_source": "kisoku",
+      "article": "規則第4条"
+    },
+    {
+      "id": "d0499",
+      "unit_id": "u078",
+      "unit_name": "市民生活班",
+      "seq": 1,
+      "text": "戸籍・住民票等の窓口業務、税務証明、国保・介護保険、福祉相談、生活保護窓口支給 ほか(原文は約69項目を列挙 — モックでは概要のみ)",
+      "legal_source": "kisoku",
+      "article": "規則第14条"
+    },
+    {
+      "id": "d0500",
+      "unit_id": "u080",
+      "unit_name": "市民生活班",
+      "seq": 1,
+      "text": "戸籍・住民票等の窓口業務、税務証明、国保・介護保険、福祉相談、生活保護窓口支給 ほか(概要)",
+      "legal_source": "kisoku",
+      "article": "規則第14条"
+    },
+    {
+      "id": "d0501",
+      "unit_id": "u081",
+      "unit_name": "地域班",
+      "seq": 1,
+      "text": "地域活動の活性化推進、行政情報の提供、地域課題の把握 ほか(概要)",
+      "legal_source": "kisoku",
+      "article": "規則第14条"
+    },
+    {
+      "id": "d0502",
+      "unit_id": "u083",
+      "unit_name": "市民生活班",
+      "seq": 1,
+      "text": "戸籍・住民票等の窓口業務、税務証明、国保・介護保険、福祉相談、生活保護窓口支給 ほか(概要)",
+      "legal_source": "kisoku",
+      "article": "規則第14条"
+    },
+    {
+      "id": "d0503",
+      "unit_id": "u084",
+      "unit_name": "地域班",
+      "seq": 1,
+      "text": "地域活動の活性化推進、行政情報の提供、地域課題の把握 ほか(概要)",
+      "legal_source": "kisoku",
+      "article": "規則第14条"
+    },
+    {
+      "id": "d0504",
+      "unit_id": "u086",
+      "unit_name": "市民生活班",
+      "seq": 1,
+      "text": "戸籍・住民票等の窓口業務、税務証明、国保・介護保険、福祉相談、生活保護窓口支給 ほか(概要)",
+      "legal_source": "kisoku",
+      "article": "規則第14条"
+    },
+    {
+      "id": "d0505",
+      "unit_id": "u087",
+      "unit_name": "地域班",
+      "seq": 1,
+      "text": "地域活動の活性化推進、行政情報の提供、地域課題の把握 ほか(概要)",
+      "legal_source": "kisoku",
+      "article": "規則第14条"
+    },
+    {
+      "id": "d0506",
+      "unit_id": "u088",
+      "unit_name": "福祉事務所",
+      "seq": 1,
+      "text": "社会福祉法第14条第6項に規定する事務",
+      "legal_source": "kisoku",
+      "article": "規則第27条"
+    },
+    {
+      "id": "d0507",
+      "unit_id": "u089",
+      "unit_name": "事務所(8か所)",
+      "seq": 1,
+      "text": "公印の管守、生活保護費支給、福祉相談、国民年金、国保、児童手当 ほか(原文は約20項目を列挙 — モックでは概要のみ)",
+      "legal_source": "kisoku",
+      "article": "規則第28条"
+    },
+    {
+      "id": "d0508",
+      "unit_id": "u091",
+      "unit_name": "総務班",
+      "seq": 1,
+      "text": "教育行政の企画調整",
+      "legal_source": "kyoiku",
+      "article": "教委規則"
+    },
+    {
+      "id": "d0509",
+      "unit_id": "u091",
+      "unit_name": "総務班",
+      "seq": 2,
+      "text": "教育委員会の会議",
+      "legal_source": "kyoiku",
+      "article": "教委規則"
+    },
+    {
+      "id": "d0510",
+      "unit_id": "u091",
+      "unit_name": "総務班",
+      "seq": 3,
+      "text": "請願、陳情等の処理",
+      "legal_source": "kyoiku",
+      "article": "教委規則"
+    },
+    {
+      "id": "d0511",
+      "unit_id": "u091",
+      "unit_name": "総務班",
+      "seq": 4,
+      "text": "規則及び規程等の制定改廃及び公示",
+      "legal_source": "kyoiku",
+      "article": "教委規則"
+    },
+    {
+      "id": "d0512",
+      "unit_id": "u091",
+      "unit_name": "総務班",
+      "seq": 5,
+      "text": "教育機関の設置及び廃止",
+      "legal_source": "kyoiku",
+      "article": "教委規則"
+    },
+    {
+      "id": "d0513",
+      "unit_id": "u091",
+      "unit_name": "総務班",
+      "seq": 6,
+      "text": "各種表彰",
+      "legal_source": "kyoiku",
+      "article": "教委規則"
+    },
+    {
+      "id": "d0514",
+      "unit_id": "u091",
+      "unit_name": "総務班",
+      "seq": 7,
+      "text": "公印の管守",
+      "legal_source": "kyoiku",
+      "article": "教委規則"
+    },
+    {
+      "id": "d0515",
+      "unit_id": "u091",
+      "unit_name": "総務班",
+      "seq": 8,
+      "text": "文書及び物品の収受及び発送",
+      "legal_source": "kyoiku",
+      "article": "教委規則"
+    },
+    {
+      "id": "d0516",
+      "unit_id": "u091",
+      "unit_name": "総務班",
+      "seq": 9,
+      "text": "教育統計調査",
+      "legal_source": "kyoiku",
+      "article": "教委規則"
+    },
+    {
+      "id": "d0517",
+      "unit_id": "u091",
+      "unit_name": "総務班",
+      "seq": 10,
+      "text": "教科用図書の採択及び給与",
+      "legal_source": "kyoiku",
+      "article": "教委規則"
+    },
+    {
+      "id": "d0518",
+      "unit_id": "u091",
+      "unit_name": "総務班",
+      "seq": 11,
+      "text": "各種委員会",
+      "legal_source": "kyoiku",
+      "article": "教委規則"
+    },
+    {
+      "id": "d0519",
+      "unit_id": "u091",
+      "unit_name": "総務班",
+      "seq": 12,
+      "text": "予算編成及び経理",
+      "legal_source": "kyoiku",
+      "article": "教委規則"
+    },
+    {
+      "id": "d0520",
+      "unit_id": "u091",
+      "unit_name": "総務班",
+      "seq": 13,
+      "text": "幼稚園の授業料及びその他歳入",
+      "legal_source": "kyoiku",
+      "article": "教委規則"
+    },
+    {
+      "id": "d0521",
+      "unit_id": "u091",
+      "unit_name": "総務班",
+      "seq": 14,
+      "text": "幼稚園の入退園等",
+      "legal_source": "kyoiku",
+      "article": "教委規則"
+    },
+    {
+      "id": "d0522",
+      "unit_id": "u091",
+      "unit_name": "総務班",
+      "seq": 15,
+      "text": "通学区域",
+      "legal_source": "kyoiku",
+      "article": "教委規則"
+    },
+    {
+      "id": "d0523",
+      "unit_id": "u091",
+      "unit_name": "総務班",
+      "seq": 16,
+      "text": "児童、生徒及び幼児の出席停止及び休業日の決定",
+      "legal_source": "kyoiku",
+      "article": "教委規則"
+    },
+    {
+      "id": "d0524",
+      "unit_id": "u091",
+      "unit_name": "総務班",
+      "seq": 17,
+      "text": "外国語指導助手",
+      "legal_source": "kyoiku",
+      "article": "教委規則"
+    },
+    {
+      "id": "d0525",
+      "unit_id": "u091",
+      "unit_name": "総務班",
+      "seq": 18,
+      "text": "公立学校及び幼稚園の管理運営",
+      "legal_source": "kyoiku",
+      "article": "教委規則"
+    },
+    {
+      "id": "d0526",
+      "unit_id": "u091",
+      "unit_name": "総務班",
+      "seq": 19,
+      "text": "教育行政に関する相談",
+      "legal_source": "kyoiku",
+      "article": "教委規則"
+    },
+    {
+      "id": "d0527",
+      "unit_id": "u091",
+      "unit_name": "総務班",
+      "seq": 20,
+      "text": "公立学校共済組合",
+      "legal_source": "kyoiku",
+      "article": "教委規則"
+    },
+    {
+      "id": "d0528",
+      "unit_id": "u091",
+      "unit_name": "総務班",
+      "seq": 21,
+      "text": "教職員住宅",
+      "legal_source": "kyoiku",
+      "article": "教委規則"
+    },
+    {
+      "id": "d0529",
+      "unit_id": "u091",
+      "unit_name": "総務班",
+      "seq": 22,
+      "text": "就学援助",
+      "legal_source": "kyoiku",
+      "article": "教委規則"
+    },
+    {
+      "id": "d0530",
+      "unit_id": "u091",
+      "unit_name": "総務班",
+      "seq": 23,
+      "text": "児童生徒の転出入",
+      "legal_source": "kyoiku",
+      "article": "教委規則"
+    },
+    {
+      "id": "d0531",
+      "unit_id": "u091",
+      "unit_name": "総務班",
+      "seq": 24,
+      "text": "幼稚園",
+      "legal_source": "kyoiku",
+      "article": "教委規則"
+    },
+    {
+      "id": "d0532",
+      "unit_id": "u091",
+      "unit_name": "総務班",
+      "seq": 25,
+      "text": "学校給食",
+      "legal_source": "kyoiku",
+      "article": "教委規則"
+    },
+    {
+      "id": "d0533",
+      "unit_id": "u091",
+      "unit_name": "総務班",
+      "seq": 26,
+      "text": "学校用務給食会",
+      "legal_source": "kyoiku",
+      "article": "教委規則"
+    },
+    {
+      "id": "d0534",
+      "unit_id": "u091",
+      "unit_name": "総務班",
+      "seq": 27,
+      "text": "教育委員会の総括",
+      "legal_source": "kyoiku",
+      "article": "教委規則"
+    },
+    {
+      "id": "d0535",
+      "unit_id": "u091",
+      "unit_name": "総務班",
+      "seq": 28,
+      "text": "課の庶務",
+      "legal_source": "kyoiku",
+      "article": "教委規則"
+    },
+    {
+      "id": "d0536",
+      "unit_id": "u091",
+      "unit_name": "総務班",
+      "seq": 29,
+      "text": "他課の主管に属しない教育行政の事務",
+      "legal_source": "kyoiku",
+      "article": "教委規則"
+    },
+    {
+      "id": "d0537",
+      "unit_id": "u091",
+      "unit_name": "総務班",
+      "seq": 30,
+      "text": "学校等の施設及び施設の整備",
+      "legal_source": "kyoiku",
+      "article": "教委規則"
+    },
+    {
+      "id": "d0538",
+      "unit_id": "u091",
+      "unit_name": "総務班",
+      "seq": 31,
+      "text": "教育総務課に関する教育財産の管理",
+      "legal_source": "kyoiku",
+      "article": "教委規則"
+    },
+    {
+      "id": "d0539",
+      "unit_id": "u091",
+      "unit_name": "総務班",
+      "seq": 32,
+      "text": "学校施設台帳の整備",
+      "legal_source": "kyoiku",
+      "article": "教委規則"
+    },
+    {
+      "id": "d0540",
+      "unit_id": "u091",
+      "unit_name": "総務班",
+      "seq": 33,
+      "text": "その他財務",
+      "legal_source": "kyoiku",
+      "article": "教委規則"
+    },
+    {
+      "id": "d0541",
+      "unit_id": "u093",
+      "unit_name": "学校教育班",
+      "seq": 1,
+      "text": "教育の基本計画",
+      "legal_source": "kyoiku",
+      "article": "教委規則"
+    },
+    {
+      "id": "d0542",
+      "unit_id": "u093",
+      "unit_name": "学校教育班",
+      "seq": 2,
+      "text": "教育課程の編成及び実施",
+      "legal_source": "kyoiku",
+      "article": "教委規則"
+    },
+    {
+      "id": "d0543",
+      "unit_id": "u093",
+      "unit_name": "学校教育班",
+      "seq": 3,
+      "text": "学校職員の任免、分限、懲戒、服務、研修その他の人事",
+      "legal_source": "kyoiku",
+      "article": "教委規則"
+    },
+    {
+      "id": "d0544",
+      "unit_id": "u093",
+      "unit_name": "学校教育班",
+      "seq": 4,
+      "text": "学校職員の人員配置",
+      "legal_source": "kyoiku",
+      "article": "教委規則"
+    },
+    {
+      "id": "d0545",
+      "unit_id": "u093",
+      "unit_name": "学校教育班",
+      "seq": 5,
+      "text": "学校職員の福利厚生",
+      "legal_source": "kyoiku",
+      "article": "教委規則"
+    },
+    {
+      "id": "d0546",
+      "unit_id": "u093",
+      "unit_name": "学校教育班",
+      "seq": 6,
+      "text": "教職員の資格及び免許状",
+      "legal_source": "kyoiku",
+      "article": "教委規則"
+    },
+    {
+      "id": "d0547",
+      "unit_id": "u093",
+      "unit_name": "学校教育班",
+      "seq": 7,
+      "text": "教職員の研修",
+      "legal_source": "kyoiku",
+      "article": "教委規則"
+    },
+    {
+      "id": "d0548",
+      "unit_id": "u093",
+      "unit_name": "学校教育班",
+      "seq": 8,
+      "text": "研究指定校",
+      "legal_source": "kyoiku",
+      "article": "教委規則"
+    },
+    {
+      "id": "d0549",
+      "unit_id": "u093",
+      "unit_name": "学校教育班",
+      "seq": 9,
+      "text": "学校同和教育",
+      "legal_source": "kyoiku",
+      "article": "教委規則"
+    },
+    {
+      "id": "d0550",
+      "unit_id": "u093",
+      "unit_name": "学校教育班",
+      "seq": 10,
+      "text": "学級編成",
+      "legal_source": "kyoiku",
+      "article": "教委規則"
+    },
+    {
+      "id": "d0551",
+      "unit_id": "u093",
+      "unit_name": "学校教育班",
+      "seq": 11,
+      "text": "学校教育の指導",
+      "legal_source": "kyoiku",
+      "article": "教委規則"
+    },
+    {
+      "id": "d0552",
+      "unit_id": "u093",
+      "unit_name": "学校教育班",
+      "seq": 12,
+      "text": "その他学校教育",
+      "legal_source": "kyoiku",
+      "article": "教委規則"
+    },
+    {
+      "id": "d0553",
+      "unit_id": "u093",
+      "unit_name": "学校教育班",
+      "seq": 13,
+      "text": "予算編成及び経理",
+      "legal_source": "kyoiku",
+      "article": "教委規則"
+    },
+    {
+      "id": "d0554",
+      "unit_id": "u093",
+      "unit_name": "学校教育班",
+      "seq": 14,
+      "text": "その他財務",
+      "legal_source": "kyoiku",
+      "article": "教委規則"
+    },
+    {
+      "id": "d0555",
+      "unit_id": "u093",
+      "unit_name": "学校教育班",
+      "seq": 15,
+      "text": "教職員並びに幼児、児童及び生徒の保健及び衛生",
+      "legal_source": "kyoiku",
+      "article": "教委規則"
+    },
+    {
+      "id": "d0556",
+      "unit_id": "u093",
+      "unit_name": "学校教育班",
+      "seq": 16,
+      "text": "園児、児童及び生徒並びに職員の健康診断",
+      "legal_source": "kyoiku",
+      "article": "教委規則"
+    },
+    {
+      "id": "d0557",
+      "unit_id": "u093",
+      "unit_name": "学校教育班",
+      "seq": 17,
+      "text": "学校医",
+      "legal_source": "kyoiku",
+      "article": "教委規則"
+    },
+    {
+      "id": "d0558",
+      "unit_id": "u093",
+      "unit_name": "学校教育班",
+      "seq": 18,
+      "text": "学校環境の衛生及び安全管理",
+      "legal_source": "kyoiku",
+      "article": "教委規則"
+    },
+    {
+      "id": "d0559",
+      "unit_id": "u093",
+      "unit_name": "学校教育班",
+      "seq": 19,
+      "text": "独立行政法人日本スポーツ振興センター",
+      "legal_source": "kyoiku",
+      "article": "教委規則"
+    },
+    {
+      "id": "d0560",
+      "unit_id": "u093",
+      "unit_name": "学校教育班",
+      "seq": 20,
+      "text": "学校給食(施設整備を除く)",
+      "legal_source": "kyoiku",
+      "article": "教委規則"
+    },
+    {
+      "id": "d0561",
+      "unit_id": "u093",
+      "unit_name": "学校教育班",
+      "seq": 21,
+      "text": "学齢簿",
+      "legal_source": "kyoiku",
+      "article": "教委規則"
+    },
+    {
+      "id": "d0562",
+      "unit_id": "u093",
+      "unit_name": "学校教育班",
+      "seq": 22,
+      "text": "就学、就学猶予並びに児童及び生徒の転入及び転出",
+      "legal_source": "kyoiku",
+      "article": "教委規則"
+    },
+    {
+      "id": "d0563",
+      "unit_id": "u095",
+      "unit_name": "生涯学習班",
+      "seq": 1,
+      "text": "生涯学習及び社会教育の総合企画及び振興",
+      "legal_source": "kyoiku",
+      "article": "教委規則"
+    },
+    {
+      "id": "d0564",
+      "unit_id": "u095",
+      "unit_name": "生涯学習班",
+      "seq": 2,
+      "text": "社会教育委員会",
+      "legal_source": "kyoiku",
+      "article": "教委規則"
+    },
+    {
+      "id": "d0565",
+      "unit_id": "u095",
+      "unit_name": "生涯学習班",
+      "seq": 3,
+      "text": "生涯教育及び社会教育",
+      "legal_source": "kyoiku",
+      "article": "教委規則"
+    },
+    {
+      "id": "d0566",
+      "unit_id": "u095",
+      "unit_name": "生涯学習班",
+      "seq": 4,
+      "text": "生涯学習関係団体等の指導育成",
+      "legal_source": "kyoiku",
+      "article": "教委規則"
+    },
+    {
+      "id": "d0567",
+      "unit_id": "u095",
+      "unit_name": "生涯学習班",
+      "seq": 5,
+      "text": "人権教育",
+      "legal_source": "kyoiku",
+      "article": "教委規則"
+    },
+    {
+      "id": "d0568",
+      "unit_id": "u095",
+      "unit_name": "生涯学習班",
+      "seq": 6,
+      "text": "成人教育及び女性教育並びに家庭教育",
+      "legal_source": "kyoiku",
+      "article": "教委規則"
+    },
+    {
+      "id": "d0569",
+      "unit_id": "u095",
+      "unit_name": "生涯学習班",
+      "seq": 7,
+      "text": "視聴覚教育",
+      "legal_source": "kyoiku",
+      "article": "教委規則"
+    },
+    {
+      "id": "d0570",
+      "unit_id": "u095",
+      "unit_name": "生涯学習班",
+      "seq": 8,
+      "text": "公民館",
+      "legal_source": "kyoiku",
+      "article": "教委規則"
+    },
+    {
+      "id": "d0571",
+      "unit_id": "u095",
+      "unit_name": "生涯学習班",
+      "seq": 9,
+      "text": "図書館",
+      "legal_source": "kyoiku",
+      "article": "教委規則"
+    },
+    {
+      "id": "d0572",
+      "unit_id": "u095",
+      "unit_name": "生涯学習班",
+      "seq": 10,
+      "text": "社会教育課に属する財産",
+      "legal_source": "kyoiku",
+      "article": "教委規則"
+    },
+    {
+      "id": "d0573",
+      "unit_id": "u095",
+      "unit_name": "生涯学習班",
+      "seq": 11,
+      "text": "予算編成及び経理",
+      "legal_source": "kyoiku",
+      "article": "教委規則"
+    },
+    {
+      "id": "d0574",
+      "unit_id": "u095",
+      "unit_name": "生涯学習班",
+      "seq": 12,
+      "text": "課の庶務",
+      "legal_source": "kyoiku",
+      "article": "教委規則"
+    },
+    {
+      "id": "d0575",
+      "unit_id": "u095",
+      "unit_name": "生涯学習班",
+      "seq": 13,
+      "text": "市民スポーツの普及奨励及びその企画",
+      "legal_source": "kyoiku",
+      "article": "教委規則"
+    },
+    {
+      "id": "d0576",
+      "unit_id": "u095",
+      "unit_name": "生涯学習班",
+      "seq": 14,
+      "text": "体育及びレクリエーション団体等の指導育成",
+      "legal_source": "kyoiku",
+      "article": "教委規則"
+    },
+    {
+      "id": "d0577",
+      "unit_id": "u095",
+      "unit_name": "生涯学習班",
+      "seq": 15,
+      "text": "社会体育施設の管理運営及び使用料の収納",
+      "legal_source": "kyoiku",
+      "article": "教委規則"
+    },
+    {
+      "id": "d0578",
+      "unit_id": "u095",
+      "unit_name": "生涯学習班",
+      "seq": 16,
+      "text": "学校体育施設開放事業",
+      "legal_source": "kyoiku",
+      "article": "教委規則"
+    },
+    {
+      "id": "d0579",
+      "unit_id": "u095",
+      "unit_name": "生涯学習班",
+      "seq": 17,
+      "text": "スポーツ推進委員",
+      "legal_source": "kyoiku",
+      "article": "教委規則"
+    },
+    {
+      "id": "d0580",
+      "unit_id": "u095",
+      "unit_name": "生涯学習班",
+      "seq": 18,
+      "text": "体育協会",
+      "legal_source": "kyoiku",
+      "article": "教委規則"
+    },
+    {
+      "id": "d0581",
+      "unit_id": "u095",
+      "unit_name": "生涯学習班",
+      "seq": 19,
+      "text": "その他社会体育",
+      "legal_source": "kyoiku",
+      "article": "教委規則"
+    },
+    {
+      "id": "d0582",
+      "unit_id": "u095",
+      "unit_name": "生涯学習班",
+      "seq": 20,
+      "text": "青少年教育の総合的な企画及び調整指導",
+      "legal_source": "kyoiku",
+      "article": "教委規則"
+    },
+    {
+      "id": "d0583",
+      "unit_id": "u095",
+      "unit_name": "生涯学習班",
+      "seq": 21,
+      "text": "青少年関係団体の指導育成",
+      "legal_source": "kyoiku",
+      "article": "教委規則"
+    },
+    {
+      "id": "d0584",
+      "unit_id": "u095",
+      "unit_name": "生涯学習班",
+      "seq": 22,
+      "text": "青少年健全育成",
+      "legal_source": "kyoiku",
+      "article": "教委規則"
+    },
+    {
+      "id": "d0585",
+      "unit_id": "u095",
+      "unit_name": "生涯学習班",
+      "seq": 23,
+      "text": "その他青少年教育",
+      "legal_source": "kyoiku",
+      "article": "教委規則"
+    },
+    {
+      "id": "d0586",
+      "unit_id": "u095",
+      "unit_name": "生涯学習班",
+      "seq": 24,
+      "text": "芸術文化及び芸能等文化の企画及び振興",
+      "legal_source": "kyoiku",
+      "article": "教委規則"
+    },
+    {
+      "id": "d0587",
+      "unit_id": "u095",
+      "unit_name": "生涯学習班",
+      "seq": 25,
+      "text": "文化及び芸能等関係団体の指導育成",
+      "legal_source": "kyoiku",
+      "article": "教委規則"
+    },
+    {
+      "id": "d0588",
+      "unit_id": "u095",
+      "unit_name": "生涯学習班",
+      "seq": 26,
+      "text": "芸術文化施設の管理運営",
+      "legal_source": "kyoiku",
+      "article": "教委規則"
+    },
+    {
+      "id": "d0589",
+      "unit_id": "u095",
+      "unit_name": "生涯学習班",
+      "seq": 27,
+      "text": "その他芸術文化振興",
+      "legal_source": "kyoiku",
+      "article": "教委規則"
+    },
+    {
+      "id": "d0590",
+      "unit_id": "u096",
+      "unit_name": "文化財班",
+      "seq": 1,
+      "text": "文化財保護審議会",
+      "legal_source": "kyoiku",
+      "article": "教委規則"
+    },
+    {
+      "id": "d0591",
+      "unit_id": "u096",
+      "unit_name": "文化財班",
+      "seq": 2,
+      "text": "文化財保護顕彰",
+      "legal_source": "kyoiku",
+      "article": "教委規則"
+    },
+    {
+      "id": "d0592",
+      "unit_id": "u096",
+      "unit_name": "文化財班",
+      "seq": 3,
+      "text": "埋蔵文化財の調査事業",
+      "legal_source": "kyoiku",
+      "article": "教委規則"
+    },
+    {
+      "id": "d0593",
+      "unit_id": "u096",
+      "unit_name": "文化財班",
+      "seq": 4,
+      "text": "文化財団体の指導育成",
+      "legal_source": "kyoiku",
+      "article": "教委規則"
+    },
+    {
+      "id": "d0594",
+      "unit_id": "u096",
+      "unit_name": "文化財班",
+      "seq": 5,
+      "text": "文化財関係施設の管理運営",
+      "legal_source": "kyoiku",
+      "article": "教委規則"
+    },
+    {
+      "id": "d0595",
+      "unit_id": "u096",
+      "unit_name": "文化財班",
+      "seq": 6,
+      "text": "文化財に属する財産の管理等",
+      "legal_source": "kyoiku",
+      "article": "教委規則"
+    },
+    {
+      "id": "d0596",
+      "unit_id": "u096",
+      "unit_name": "文化財班",
+      "seq": 7,
+      "text": "予算編成及び経理",
+      "legal_source": "kyoiku",
+      "article": "教委規則"
+    },
+    {
+      "id": "d0597",
+      "unit_id": "u096",
+      "unit_name": "文化財班",
+      "seq": 8,
+      "text": "その他文化財",
+      "legal_source": "kyoiku",
+      "article": "教委規則"
+    }
+  ],
+  "amendments": [
+    {
+      "source": "jorei",
+      "promulgated_on": "2011-01-26",
+      "enforced_on": null,
+      "number": "条例第1号",
+      "kind": "制定"
+    },
+    {
+      "source": "jorei",
+      "promulgated_on": "2012-06-20",
+      "enforced_on": "2012-07-09",
+      "number": "条例第31号",
+      "kind": "改正"
+    },
+    {
+      "source": "jorei",
+      "promulgated_on": "2015-03-23",
+      "enforced_on": "2015-04-01",
+      "number": "条例第13号",
+      "kind": "改正"
+    },
+    {
+      "source": "jorei",
+      "promulgated_on": "2017-03-22",
+      "enforced_on": "2017-04-01",
+      "number": "条例第9号",
+      "kind": "改正"
+    },
+    {
+      "source": "jorei",
+      "promulgated_on": "2019-03-20",
+      "enforced_on": "2019-04-01",
+      "number": "条例第2号",
+      "kind": "改正"
+    },
+    {
+      "source": "jorei",
+      "promulgated_on": "2023-12-22",
+      "enforced_on": "2024-04-01",
+      "number": "条例第31号",
+      "kind": "改正"
+    },
+    {
+      "source": "jorei",
+      "promulgated_on": "2024-09-25",
+      "enforced_on": "2025-01-01",
+      "number": "条例第20号",
+      "kind": "改正"
+    },
+    {
+      "source": "jorei",
+      "promulgated_on": "2025-03-14",
+      "enforced_on": "2025-06-01",
+      "number": "条例第6号",
+      "kind": "改正"
+    },
+    {
+      "source": "jorei",
+      "promulgated_on": "2026-03-19",
+      "enforced_on": null,
+      "number": "条例第4号",
+      "kind": "附則未掲載"
+    },
+    {
+      "source": "kisoku",
+      "recorded_on": "2004-03-01",
+      "number": "規則第2号",
+      "kind": "制定"
+    },
+    {
+      "source": "kisoku",
+      "recorded_on": "2005-04-01",
+      "number": "規則第5号",
+      "kind": "改正"
+    },
+    {
+      "source": "kisoku",
+      "recorded_on": "2005-06-27",
+      "number": "規則第12号",
+      "kind": "改正"
+    },
+    {
+      "source": "kisoku",
+      "recorded_on": "2006-03-29",
+      "number": "規則第12号",
+      "kind": "改正"
+    },
+    {
+      "source": "kisoku",
+      "recorded_on": "2006-06-27",
+      "number": "規則第31号",
+      "kind": "改正"
+    },
+    {
+      "source": "kisoku",
+      "recorded_on": "2006-12-12",
+      "number": "規則第49号",
+      "kind": "改正"
+    },
+    {
+      "source": "kisoku",
+      "recorded_on": "2007-03-26",
+      "number": "規則第16号",
+      "kind": "改正"
+    },
+    {
+      "source": "kisoku",
+      "recorded_on": "2007-09-21",
+      "number": "規則第26号",
+      "kind": "改正"
+    },
+    {
+      "source": "kisoku",
+      "recorded_on": "2008-03-28",
+      "number": "規則第17号",
+      "kind": "改正"
+    },
+    {
+      "source": "kisoku",
+      "recorded_on": "2008-04-17",
+      "number": "規則第20号",
+      "kind": "改正"
+    },
+    {
+      "source": "kisoku",
+      "recorded_on": "2009-03-31",
+      "number": "規則第9号",
+      "kind": "改正"
+    },
+    {
+      "source": "kisoku",
+      "recorded_on": "2010-04-01",
+      "number": "規則第8号",
+      "kind": "改正"
+    },
+    {
+      "source": "kisoku",
+      "recorded_on": "2010-04-01",
+      "number": "規則第10号",
+      "kind": "改正"
+    },
+    {
+      "source": "kisoku",
+      "recorded_on": "2010-04-01",
+      "number": "規則第29号",
+      "kind": "改正"
+    },
+    {
+      "source": "kisoku",
+      "recorded_on": "2011-03-31",
+      "number": "規則第2号",
+      "kind": "改正"
+    },
+    {
+      "source": "kisoku",
+      "recorded_on": "2012-04-01",
+      "number": "規則第23号",
+      "kind": "改正"
+    },
+    {
+      "source": "kisoku",
+      "recorded_on": "2012-07-09",
+      "number": "規則第33号",
+      "kind": "改正"
+    },
+    {
+      "source": "kisoku",
+      "recorded_on": "2013-04-01",
+      "number": "規則第5号",
+      "kind": "改正"
+    },
+    {
+      "source": "kisoku",
+      "recorded_on": "2014-04-01",
+      "number": "規則第19号",
+      "kind": "改正"
+    },
+    {
+      "source": "kisoku",
+      "recorded_on": "2015-01-01",
+      "number": "規則第1号",
+      "kind": "改正"
+    },
+    {
+      "source": "kisoku",
+      "recorded_on": "2015-04-01",
+      "number": "規則第4号",
+      "kind": "改正"
+    },
+    {
+      "source": "kisoku",
+      "recorded_on": "2015-05-01",
+      "number": "規則第31号",
+      "kind": "改正"
+    },
+    {
+      "source": "kisoku",
+      "recorded_on": "2015-09-01",
+      "number": "規則第35号",
+      "kind": "改正"
+    },
+    {
+      "source": "kisoku",
+      "recorded_on": "2016-04-01",
+      "number": "規則第3号",
+      "kind": "改正"
+    },
+    {
+      "source": "kisoku",
+      "recorded_on": "2016-06-01",
+      "number": "規則第26号",
+      "kind": "改正"
+    },
+    {
+      "source": "kisoku",
+      "recorded_on": "2016-09-01",
+      "number": "規則第31号",
+      "kind": "改正"
+    },
+    {
+      "source": "kisoku",
+      "recorded_on": "2017-04-01",
+      "number": "規則第5号",
+      "kind": "改正"
+    },
+    {
+      "source": "kisoku",
+      "recorded_on": "2017-11-01",
+      "number": "規則第25号",
+      "kind": "改正"
+    },
+    {
+      "source": "kisoku",
+      "recorded_on": "2018-04-01",
+      "number": "規則第2号",
+      "kind": "改正"
+    },
+    {
+      "source": "kisoku",
+      "recorded_on": "2018-07-01",
+      "number": "規則第15号",
+      "kind": "改正"
+    },
+    {
+      "source": "kisoku",
+      "recorded_on": "2019-04-01",
+      "number": "規則第13号",
+      "kind": "改正"
+    },
+    {
+      "source": "kisoku",
+      "recorded_on": "2020-04-01",
+      "number": "規則第8号",
+      "kind": "改正"
+    },
+    {
+      "source": "kisoku",
+      "recorded_on": "2020-09-01",
+      "number": "規則第44号",
+      "kind": "改正"
+    },
+    {
+      "source": "kisoku",
+      "recorded_on": "2021-04-01",
+      "number": "規則第3号",
+      "kind": "改正"
+    },
+    {
+      "source": "kisoku",
+      "recorded_on": "2022-04-01",
+      "number": "規則第8号",
+      "kind": "改正"
+    },
+    {
+      "source": "kisoku",
+      "recorded_on": "2023-04-01",
+      "number": "規則第5号",
+      "kind": "改正"
+    },
+    {
+      "source": "kisoku",
+      "recorded_on": "2024-04-01",
+      "number": "規則第4号",
+      "kind": "改正"
+    },
+    {
+      "source": "kisoku",
+      "recorded_on": "2025-01-01",
+      "number": "規則第1号",
+      "kind": "改正"
+    },
+    {
+      "source": "kisoku",
+      "recorded_on": "2025-06-01",
+      "number": "規則第11号",
+      "kind": "改正"
+    },
+    {
+      "source": "kyoiku",
+      "recorded_on": "2004-03-01",
+      "number": "教委規則第5号",
+      "kind": "制定"
+    },
+    {
+      "source": "kyoiku",
+      "recorded_on": "2005-07-01",
+      "number": "教委規則第5号",
+      "kind": "改正"
+    },
+    {
+      "source": "kyoiku",
+      "recorded_on": "2009-03-27",
+      "number": "教委規則第2号",
+      "kind": "改正"
+    },
+    {
+      "source": "kyoiku",
+      "recorded_on": "2011-03-15",
+      "number": "教委規則第3号",
+      "kind": "改正"
+    },
+    {
+      "source": "kyoiku",
+      "recorded_on": "2012-03-16",
+      "number": "教委規則第1号",
+      "kind": "改正"
+    },
+    {
+      "source": "kyoiku",
+      "recorded_on": "2013-04-01",
+      "number": "教委規則第1号",
+      "kind": "改正"
+    },
+    {
+      "source": "kyoiku",
+      "recorded_on": "2015-04-01",
+      "number": "教委規則第2号",
+      "kind": "改正"
+    },
+    {
+      "source": "kyoiku",
+      "recorded_on": "2017-03-24",
+      "number": "教委規則第6号",
+      "kind": "改正"
+    },
+    {
+      "source": "kyoiku",
+      "recorded_on": "2019-04-01",
+      "number": "教委規則第1号",
+      "kind": "改正"
+    }
+  ]
+}

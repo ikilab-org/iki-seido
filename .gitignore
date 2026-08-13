@@ -1,0 +1,11 @@
+# tools/ は外部依存なしで動く（テストは node --test だけで回る）。
+# 一時的に npm を使う場合に備えて、インストール先だけ追跡から外す。
+node_modules/
+
+# 例規HTMLの取得キャッシュ（cache/）は意図的に無視していない。
+# ROADMAP のリスク対策「キャッシュを常に保持し、取得日を記録」に沿って
+# 追跡するかどうかは、parse_reiki.py を本実装する v0.2 で決める。
+
+.DS_Store
+.superpowers/
+.claude/settings.local.json

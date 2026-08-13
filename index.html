@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>壱岐市 規定集の見える化 | IKILAB</title>
+<meta name="description" content="壱岐市の行政組織条例・規則の条文から、組織図・窓口逆引き・改正タイムラインを自動生成するシビックテック・プロトタイプ。">
+<style>
+:root {
+  color-scheme: light;
+  --page: #f9f9f7;
+  --surface: #fcfcfb;
+  --ink-1: #0b0b0b;
+  --ink-2: #52514e;
+  --muted: #898781;
+  --grid: #e1e0d9;
+  --baseline: #c3c2b7;
+  --border: rgba(11,11,11,0.10);
+  --jorei: #2a78d6;
+  --kisoku: #eb6834;
+  --kyoiku: #1baf7a;
+  --jorei-wash: rgba(42,120,214,0.08);
+  --kisoku-wash: rgba(235,104,52,0.08);
+  --kyoiku-wash: rgba(27,175,122,0.10);
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --page: #0d0d0d;
+    --surface: #1a1a19;
+    --ink-1: #ffffff;
+    --ink-2: #c3c2b7;
+    --muted: #898781;
+    --grid: #2c2c2a;
+    --baseline: #383835;
+    --border: rgba(255,255,255,0.10);
+    --jorei: #3987e5;
+    --kisoku: #d95926;
+    --kyoiku: #199e70;
+    --jorei-wash: rgba(57,135,229,0.14);
+    --kisoku-wash: rgba(217,89,38,0.14);
+    --kyoiku-wash: rgba(25,158,112,0.16);
+  }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0; background: var(--page); color: var(--ink-1);
+  font-family: system-ui, -apple-system, "Segoe UI", "Hiragino Sans", "Noto Sans JP", sans-serif;
+  font-size: 14.5px; line-height: 1.75;
+}
+.wrap { max-width: 860px; margin: 0 auto; padding: 36px 22px 56px; }
+.eyebrow { font-size: 12px; color: var(--muted); letter-spacing: .12em; margin: 0; }
+h1 { font-size: 26px; margin: 4px 0 10px; line-height: 1.35; }
+.lede { color: var(--ink-2); font-size: 15px; margin: 0 0 20px; }
+.tiles { display: flex; flex-wrap: wrap; gap: 10px; margin: 0 0 8px; }
+.tile { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 8px 18px; }
+.tile .v { font-size: 24px; font-weight: 650; line-height: 1.2; }
+.tile .k { font-size: 11px; color: var(--muted); }
+.note { font-size: 12px; color: var(--muted); }
+h2 { font-size: 18px; margin: 36px 0 6px; }
+.h2sub { color: var(--ink-2); font-size: 13px; margin: 0 0 14px; }
+.protos { display: grid; grid-template-columns: 1fr; gap: 12px; }
+.proto {
+  display: block; text-decoration: none; color: inherit;
+  background: var(--surface); border: 1px solid var(--border); border-radius: 14px;
+  padding: 18px 22px; border-left: 5px solid var(--baseline);
+  transition: transform .06s ease;
+}
+.proto:hover { transform: translateY(-1px); border-color: var(--baseline); }
+.proto.a { border-left-color: var(--jorei); }
+.proto.b { border-left-color: var(--kisoku); }
+.proto.c { border-left-color: var(--kyoiku); }
+.proto h3 { margin: 0; font-size: 16.5px; }
+.proto h3 .tag { font-size: 11px; color: var(--muted); font-weight: 400; margin-left: 8px; }
+.proto p { margin: 6px 0 0; font-size: 13.5px; color: var(--ink-2); }
+.proto .go { display: inline-block; margin-top: 8px; font-size: 13px; color: var(--jorei); font-weight: 600; }
+.pipe { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; font-size: 13px; margin: 8px 0; }
+.pipe .box { border: 1px solid var(--border); background: var(--surface); border-radius: 9px; padding: 6px 14px; }
+.pipe .box small { display: block; color: var(--muted); font-size: 11px; }
+.pipe .arr { color: var(--muted); }
+.datafiles { display: flex; flex-wrap: wrap; gap: 8px; margin: 10px 0 0; }
+.datafiles a {
+  font-size: 12.5px; color: var(--ink-2); text-decoration: none;
+  border: 1px solid var(--baseline); border-radius: 999px; padding: 3px 12px;
+}
+.datafiles a:hover { border-color: var(--jorei); color: var(--jorei); }
+.roadmap { border-left: 2px solid var(--grid); padding-left: 20px; margin-top: 14px; }
+.phase { position: relative; margin: 0 0 18px; }
+.phase::before {
+  content: ""; position: absolute; left: -26px; top: 8px;
+  width: 10px; height: 10px; border-radius: 50%; background: var(--baseline);
+}
+.phase.done::before { background: var(--kyoiku); }
+.phase.next::before { background: var(--jorei); }
+.phase h3 { margin: 0; font-size: 14.5px; }
+.phase h3 .when { font-size: 11.5px; color: var(--muted); font-weight: 400; margin-left: 8px; }
+.phase p { margin: 3px 0 0; font-size: 13px; color: var(--ink-2); }
+.phase .badge {
+  font-size: 10.5px; border-radius: 4px; padding: 0 7px; font-weight: 600; margin-left: 6px;
+}
+.phase .badge.done { background: var(--kyoiku-wash); color: var(--kyoiku); }
+.phase .badge.next { background: var(--jorei-wash); color: var(--jorei); }
+footer.site { margin-top: 44px; border-top: 1px solid var(--grid); padding-top: 14px; font-size: 11.5px; color: var(--muted); line-height: 1.8; }
+footer.site a { color: var(--ink-2); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <p class="eyebrow">IKILAB CIVIC TECH PROTOTYPE</p>
+  <h1>壱岐市 規定集の見える化</h1>
+  <p class="lede">市の規則は「課 → やること」の順で書かれた、市役所の設計図です。このプロジェクトは、壱岐市の3つの組織例規の条文を機械可読データに起こし、そこから<b>組織図・窓口の逆引き・改正の歴史</b>という3つの読み方を自動生成する実験です。条文がデータになれば、同じ源からいくつもの「見え方」が生まれます。</p>
+  <div class="tiles">
+    <div class="tile"><div class="v">3</div><div class="k">元になった例規</div></div>
+    <div class="tile"><div class="v">96</div><div class="k">組織ユニット</div></div>
+    <div class="tile"><div class="v">597</div><div class="k">分掌事務(号)</div></div>
+    <div class="tile"><div class="v">57</div><div class="k">改正沿革イベント</div></div>
+  </div>
+  <p class="note">元データ: 壱岐市行政組織条例 / 行政組織規則 / 教育委員会事務局組織規則(2026年8月11日取得)</p>
+
+  <h2>3つのプロトタイプ</h2>
+  <p class="h2sub">すべて同じデータセットから描画しています。</p>
+  <div class="protos">
+    <a class="proto a" href="soshiki.html">
+      <h3>組織の見える化<span class="tag">構造 ─ いま誰が何をしているか</span></h3>
+      <p>部→課→班のツリーを条文から自動生成。クリックすると根拠条文と所掌事務が開く。条例(議会)・規則(市長)・教委規則(教育委員会)の3層を色分けし、「組織の実質は規則第4条にある」ことを可視化。</p>
+      <span class="go">開く →</span>
+    </a>
+    <a class="proto b" href="madoguchi.html">
+      <h3>どこに聞けばいい?<span class="tag">逆引き ─ 用件から担当窓口へ</span></h3>
+      <p>「引っ越し」「ごみ」「空き家」などの言葉から、担当する課・班を条文ごと逆引き。規定の書かれ方(課→事務)を市民の知りたい方向(用件→課)にひっくり返す。答えには必ず根拠条文が付く。</p>
+      <span class="go">開く →</span>
+    </a>
+    <a class="proto c" href="ugoki.html">
+      <h3>組織のうごき<span class="tag">時間軸 ─ 22年でどう変わってきたか</span></h3>
+      <p>合併(2004)から現在までの改正沿革57イベントを年表とチャートに。規則は38回=毎年動く、条例+規則の同日施行7回=部レベル再編の指紋、そして附則が見当たらない令和8年改正という「ウォッチ案件」まで。</p>
+      <span class="go">開く →</span>
+    </a>
+  </div>
+
+  <h2>仕組み</h2>
+  <p class="h2sub">例規集の条文が、そのままデータ基盤になります。</p>
+  <div class="pipe">
+    <span class="box">壱岐市例規集<small>条例・規則のHTML</small></span><span class="arr">→</span>
+    <span class="box">構造化データ<small>units / duties / amendments</small></span><span class="arr">→</span>
+    <span class="box">3つのビュー<small>組織図・逆引き・年表</small></span>
+  </div>
+  <div class="pipe">
+    <span class="box">iki-watch(構想)<small>改正を自動検知</small></span><span class="arr">→</span>
+    <span class="box">新旧対照を生成<small>差分と履歴の蓄積</small></span><span class="arr">→</span>
+    <span class="box">データとビューを自動更新</span>
+  </div>
+  <p style="font-size:13px;color:var(--ink-2)">データはオープンデータとして公開予定(条文は著作権法13条により権利の目的とならない/整理部分はCC BY 4.0・コードはMIT ─ <a href="https://github.com/ikilab-org/iki-keikaku" style="color:inherit">計画マップ(iki-keikaku)</a>と同方針)。</p>
+  <div class="datafiles">
+    <a href="data/README.md">README</a>
+    <a href="data/iki-seido-org.json">iki-seido-org.json</a>
+    <a href="data/org_units.csv">org_units.csv</a>
+    <a href="data/duties.csv">duties.csv</a>
+    <a href="data/amendments.csv">amendments.csv</a>
+    <a href="data/datapackage.json">datapackage.json</a>
+  </div>
+
+  <h2>ロードマップ</h2>
+  <p class="h2sub">詳細は同梱の ROADMAP.md へ。</p>
+  <div class="roadmap">
+    <div class="phase done">
+      <h3>v0.1 ブレストと試作<span class="badge done">完了</span><span class="when">2026年8月</span></h3>
+      <p>組織系3例規を構造化し、3つのプロトタイプと検証済みデータセットを作成。既知の限界も明文化。</p>
+    </div>
+    <div class="phase next">
+      <h3>v0.2 データを固める<span class="badge next">次はここ</span><span class="when">〜2026年9月</span></h3>
+      <p>支所69項目・会計課・教委条番号の完全収録。パーサ自動化(96/597/57一致で移行判定)。リポジトリ&ライセンスはiki-keikakuの規約を踏襲(CC BY 4.0+MIT、GitHub Pages)。iki-watchに例規4本を登録。令和8年条例第4号の正体確認。</p>
+    </div>
+    <div class="phase">
+      <h3>v0.3 公開ベータ<span class="when">〜2026年10月</span></h3>
+      <p>seido.ikilab.orgで公開。逆引き検索をTursoのハイブリッド検索(iki-gikai資産)に載せ替え。課の連絡先・公式ページを突合。ゼロヒットクエリを収集して同義語辞書を育てる。</p>
+    </div>
+    <div class="phase">
+      <h3>v0.4 つなげる<span class="when">〜2026年内</span></h3>
+      <p>iki-gikai連携: 課をクリックすると議会でのその課の議論が見える。計画マップ(keikaku.ikilab.org)と所管課で相互リンク ─ 名寄せは検証済み(32計画すべて一致)。定員管理調査の部門別職員数を組織図に重ねる。改正検知→新旧対照→年表自動追記の運転開始。</p>
+    </div>
+    <div class="phase">
+      <h3>v1.0 例規集全体へ<span class="when">2027年</span></h3>
+      <p>数百本ある壱岐市例規集の横断検索・分類マップへ拡張(「iki-gikaiの例規版」)。市・議会への提案と協働。同型の例規CMSを使う他自治体へのテンプレート横展開。</p>
+    </div>
+  </div>
+
+  <footer class="site">
+    <p>出典: <a href="https://www.city.iki.nagasaki.jp/section/reiki/reiki_honbun/r014RG00000958.html">壱岐市行政組織条例</a> / <a href="https://www.city.iki.nagasaki.jp/section/reiki/reiki_honbun/r014RG00000018.html">壱岐市行政組織規則</a> / <a href="https://www.city.iki.nagasaki.jp/section/reiki/reiki_honbun/r014RG00000190.html">壱岐市教育委員会事務局組織規則</a>(2026年8月11日取得)。本サイトはIKILABによる非公式の実験的プロトタイプであり、壱岐市の公式情報ではありません。正式な内容は必ず例規本文・市公式サイトを確認してください。<br>
+    ikilab.org ─ 島内外を接続する実験装置 / お問い合わせ・フィードバック歓迎</p>
+  </footer>
+</div>
+</body>
+</html>
