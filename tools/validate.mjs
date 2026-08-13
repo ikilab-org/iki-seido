@@ -17,6 +17,7 @@ import { fileURLToPath } from 'node:url'
 import { parseYaml } from './yaml.mjs'
 import { expand } from './search.mjs'
 import { CSV_COLUMNS } from './build.mjs'
+import { buildSources } from './view-model.mjs'
 
 export const ENUM = {
   level: ['部', '課', '班', '室', '出先機関'],
@@ -24,6 +25,14 @@ export const ENUM = {
   branch: ['市長部局 ─ 本庁(6部)', '会計管理者の補助組織', '出先機関(市長部局)', '教育委員会事務局(市長部局とは別系統)'],
   kind: ['制定', '改正', '附則未掲載'],
 }
+
+/**
+ * 分掌事務の文言に「概要」の語を含む=要約であるユニットの一覧。
+ * NOTICE.md・DISCLAIMER.md・data/README.md・quality_notes に同じ8件が手で
+ * 複製されている。ここが変わったら、その4箇所も揃えて直すこと（法的な
+ * 意味が変わる。要約は CC BY 4.0、条文の転記は著作権法13条により対象外）。
+ */
+export const SUMMARY_UNIT_IDS = ['u078', 'u080', 'u081', 'u083', 'u084', 'u086', 'u087', 'u089']
 
 /**
  * v0.2 でパーサに載せ替えるまでの、データ差し替え事故の安全装置。
@@ -92,6 +101,7 @@ export function validate({ data, syn, scenarios, datapackage, fileExists = (p) =
     if (dutyIds.has(d.id)) add('error', d.id, 'id が重複しています')
     dutyIds.add(d.id)
     if (!byId.has(d.unit_id)) add('error', d.id, `unit_id の参照先がありません: ${d.unit_id}`)
+    if (!ENUM.legal_source.includes(d.legal_source)) add('error', d.id, `legal_source が値域外です: ${d.legal_source}`)
     dutiesOf.set(d.unit_id, (dutiesOf.get(d.unit_id) ?? 0) + 1)
   }
   for (const u of units) {
@@ -102,6 +112,7 @@ export function validate({ data, syn, scenarios, datapackage, fileExists = (p) =
   // --- 沿革 ---
   for (const a of amendments) {
     const label = `${a.source} ${a.number}`
+    if (!ENUM.legal_source.includes(a.source)) add('error', label, `source が値域外です: ${a.source}`)
     if (!ENUM.kind.includes(a.kind)) add('error', label, `kind が値域外です: ${a.kind}`)
     for (const f of ['promulgated_on', 'enforced_on', 'recorded_on']) {
       if (a[f] && !validDate(a[f])) add('error', label, `${f} が日付として不正です: ${a[f]}`)
@@ -118,6 +129,36 @@ export function validate({ data, syn, scenarios, datapackage, fileExists = (p) =
     if (actual.join(',') !== expected.join(',')) {
       add('error', r.name, `フィールド定義が CSV の列と一致しません: [${actual}] ≠ [${expected}]`)
     }
+  }
+
+  // --- 要約ユニットの一覧 ---
+  // 分掌事務の文言に「概要」の語を含むユニットが、NOTICE.md 等に手で複製された
+  // 8件（SUMMARY_UNIT_IDS）とちょうど一致するかを検査する。ここが崩れたまま
+  // 気づかないと、CONTRIBUTING.md が歓迎している「要約を原文に置き換える」
+  // 貢献のあとも NOTICE.md が要約でなくなった記述に CC BY 4.0 を主張し続け、
+  // 著作権法13条により対象外のはずの条文の転記を過剰にクレジット要求してしまう。
+  const summaryUnitIds = [...new Set(duties.filter((d) => d.text && d.text.includes('概要')).map((d) => d.unit_id))].sort()
+  const expectedSummaryIds = [...SUMMARY_UNIT_IDS].sort()
+  if (summaryUnitIds.join(',') !== expectedSummaryIds.join(',')) {
+    add('error', '(要約ユニット)', `分掌事務の文言に「概要」を含むユニットが期待の8件と一致しません: 実際=[${summaryUnitIds.join('・')}] 期待=[${expectedSummaryIds.join('・')}]。NOTICE.md・DISCLAIMER.md・data/README.md・quality_notes（と SUMMARY_UNIT_IDS）を揃えて更新してください`)
+  }
+
+  // --- 例規の書誌情報 ---
+  // data.sources は datapackage 等どこからも読まれておらず、実際に使われて
+  // いる書誌は tools/view-model.mjs の SOURCES（buildSources()）。二重管理を
+  // やめる大きな変更はしないが、少なくとも食い違いには気づけるようにする。
+  const liveSources = buildSources()
+  const dataSourceIds = new Set()
+  for (const s of data.sources ?? []) {
+    dataSourceIds.add(s.id)
+    const live = liveSources[s.id]
+    if (!live) { add('error', s.id ?? '(id なし)', `sources に id:${s.id} がありますが view-model.mjs の SOURCES にありません`); continue }
+    for (const f of ['name', 'url', 'era']) {
+      if (s[f] !== live[f]) add('error', s.id, `sources.${f} が view-model.mjs の SOURCES と食い違います: [${s[f]}] ≠ [${live[f]}]`)
+    }
+  }
+  for (const id of Object.keys(liveSources)) {
+    if (!dataSourceIds.has(id)) add('error', id, `view-model.mjs の SOURCES にありますが data.sources にありません: ${id}`)
   }
 
   // --- 同義語辞書 ---

@@ -2,7 +2,8 @@ import { test } from 'node:test'
 import assert from 'node:assert/strict'
 import { readFileSync } from 'node:fs'
 import { parseYaml } from './yaml.mjs'
-import { validate, EXPECTED_COUNTS } from './validate.mjs'
+import { validate, EXPECTED_COUNTS, SUMMARY_UNIT_IDS } from './validate.mjs'
+import { buildSources } from './view-model.mjs'
 
 const at = (p) => new URL(`../${p}`, import.meta.url)
 const load = () => ({
@@ -19,15 +20,20 @@ test('現行データは error 0 で通る', () => {
   assert.deepEqual(errors(validate(load())), [])
 })
 
-test('現行データの warn は同義語2語だけ', () => {
-  // ブリーフでは ['長寿', '空き家'] だったが、id は synonyms.yml の項目キー
-  // であって条文に当たらない展開先の語そのものではない（テスト9・10が
-  // 同じ前提: id === 'ホバークラフト' / id === 'ごみ袋'、いずれも辞書キー）。
-  // 「長寿」は "高齢者" 項目の展開先の1語であって、それ自体が項目キーとして
-  // synonyms.yml に存在するわけではない（実行結果で検証済み。詳細は
-  // tools/validate.mjs の実装と task-9-report.md を参照）。
-  const w = warns(validate(load()))
-  assert.deepEqual(w.map((x) => x.id).sort(), ['高齢者', '空き家'].sort())
+test('高齢者・空き家の展開先不足が warn として現れる', () => {
+  // id は synonyms.yml の項目キーであって条文に当たらない展開先の語そのもの
+  // ではない（テスト9・10が同じ前提: id === 'ホバークラフト' / id === 'ごみ袋'、
+  // いずれも辞書キー）。「長寿」は "高齢者" 項目の展開先の1語であって、それ自体が
+  // 項目キーとして synonyms.yml に存在するわけではない（実行結果で検証済み）。
+  //
+  // かつては warn 集合の完全一致（deepEqual）で検査していたが、それだと
+  // data/synonyms.yml に新しい項目を1件足しただけで（辞書の追加はこのプロジェクトが
+  // 最も歓迎する貢献）、その項目の展開先が1語でも条文に当たらなければ warn が
+  // 1件増えて即座にテストが赤くなる。既知の2件が warn に含まれることだけを
+  // 検査し、辞書の増加には寛容にする。
+  const ids = warns(validate(load())).map((x) => x.id)
+  assert.ok(ids.includes('高齢者'), '高齢者 が warn に含まれること')
+  assert.ok(ids.includes('空き家'), '空き家 が warn に含まれること')
 })
 
 test('件数の固定値は 96 / 597 / 57', () => {
@@ -128,4 +134,53 @@ test('article が空欄なら todo: の有無によらず error にする', () =
   const f = validate(input)
   assert.ok(errors(f).some((x) => x.id === 'u001' && /article/.test(x.message)))
   assert.equal(warns(f).filter((x) => x.id === 'u001').length, 0)
+})
+
+test('amendments[].source の値域外を error にする', () => {
+  // view-model.mjs の buildAmendments() は pick(source) で完全一致フィルタする
+  // ため、source の typo（例: jorei → jourei）はその行を黙って結果から消す。
+  // 件数（EXPECTED_COUNTS）は配列長を見るだけなので変化せず、検知できない。
+  const input = load()
+  input.data.amendments = input.data.amendments.map((a, i) => (i === 0 ? { ...a, source: 'jourei' } : a))
+  assert.ok(errors(validate(input)).some((f) => /source/.test(f.message) && /jourei/.test(f.message)))
+})
+
+test('duties[].legal_source の値域外を error にする', () => {
+  const input = load()
+  input.data.duties = input.data.duties.map((d) => (d.id === 'd0001' ? { ...d, legal_source: 'jourei' } : d))
+  assert.ok(errors(validate(input)).some((f) => f.id === 'd0001' && /legal_source/.test(f.message)))
+})
+
+test('要約8ユニットの一覧が SUMMARY_UNIT_IDS と一致する', () => {
+  assert.deepEqual(errors(validate(load())), [])
+  assert.deepEqual([...SUMMARY_UNIT_IDS].sort(), ['u078', 'u080', 'u081', 'u083', 'u084', 'u086', 'u087', 'u089'])
+})
+
+test('「概要」を含む分掌事務が増減すると要約ユニットの一覧が error になる', () => {
+  const input = load()
+  // u001（要約に含まれないユニット）の分掌事務に「概要」の語を紛れ込ませる
+  input.data.duties = input.data.duties.map((d) => (d.id === 'd0001' ? { ...d, text: `${d.text}(概要)` } : d))
+  assert.ok(errors(validate(input)).some((f) => f.id === '(要約ユニット)'))
+})
+
+test('data.sources が view-model.mjs の SOURCES と一致する', () => {
+  assert.deepEqual(errors(validate(load())), [])
+})
+
+test('sources.name が view-model.mjs の SOURCES と食い違えば error にする', () => {
+  const input = load()
+  input.data.sources = input.data.sources.map((s) => (s.id === 'jorei' ? { ...s, name: '別の名前' } : s))
+  assert.ok(errors(validate(input)).some((f) => f.id === 'jorei' && /sources\.name/.test(f.message)))
+})
+
+test('data.sources に無い id が view-model.mjs の SOURCES にあれば error にする', () => {
+  const input = load()
+  input.data.sources = input.data.sources.filter((s) => s.id !== 'kyoiku')
+  assert.ok(errors(validate(input)).some((f) => f.id === 'kyoiku'))
+})
+
+test('sources は buildSources() の内容そのものを反映する', () => {
+  const live = buildSources()
+  const input = load()
+  assert.deepEqual(new Set(input.data.sources.map((s) => s.id)), new Set(Object.keys(live)))
 })
