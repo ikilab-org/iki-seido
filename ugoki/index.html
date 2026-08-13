@@ -455,7 +455,11 @@ document.getElementById("tiles").innerHTML =
 
 /* chart: stacked bars per year */
 (function () {
-  const years = []; for (let y = 2004; y <= 2026; y++) years.push(y);
+  // 年の範囲はデータから決める。直書きすると、範囲の外に改正が1件入った時点で
+  // counts[年] が undefined になり、この下の集計が例外で止まって年表が消える
+  const eventYears = EVENTS.map(e => +e.d.slice(0, 4));
+  const years = [];
+  for (let y = Math.min(...eventYears); y <= Math.max(...eventYears); y++) years.push(y);
   const counts = {};
   years.forEach(y => counts[y] = { kisoku: 0, jorei: 0, kyoiku: 0 });
   EVENTS.forEach(e => { counts[+e.d.slice(0, 4)][e.src]++; });
