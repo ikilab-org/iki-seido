@@ -192,7 +192,7 @@ EOF
 iki-keikaku の実装をコピーする。
 
 **Files:**
-- Create: `tools/yaml.mjs`（`/Users/yet2come/Projects/iki-keikaku/tools/yaml.mjs` の複製）
+- Create: `tools/yaml.mjs`（`../iki-keikaku/tools/yaml.mjs` の複製）
 - Create: `tools/yaml.test.mjs`（同 `tools/yaml.test.mjs` の複製）
 
 **Interfaces:**
@@ -202,8 +202,8 @@ iki-keikaku の実装をコピーする。
 - [ ] **Step 1: コピー**
 
 ```bash
-cp /Users/yet2come/Projects/iki-keikaku/tools/yaml.mjs tools/yaml.mjs
-cp /Users/yet2come/Projects/iki-keikaku/tools/yaml.test.mjs tools/yaml.test.mjs
+cp ../iki-keikaku/tools/yaml.mjs tools/yaml.mjs
+cp ../iki-keikaku/tools/yaml.test.mjs tools/yaml.test.mjs
 ```
 
 - [ ] **Step 2: テストを走らせる**
@@ -1703,7 +1703,7 @@ EOF
 ### Task 10: 例規ページの死活確認
 
 **Files:**
-- Create: `tools/linkcheck.mjs`（`/Users/yet2come/Projects/iki-keikaku/tools/linkcheck.mjs` を土台に書き換え）
+- Create: `tools/linkcheck.mjs`（`../iki-keikaku/tools/linkcheck.mjs` を土台に書き換え）
 
 **Interfaces:**
 - Consumes: `view-model.mjs` の `buildSources()`（Task 4）
@@ -1712,7 +1712,7 @@ EOF
 - [ ] **Step 1: 土台を読む**
 
 ```bash
-cat /Users/yet2come/Projects/iki-keikaku/tools/linkcheck.mjs
+cat ../iki-keikaku/tools/linkcheck.mjs
 ```
 
 引き継ぐ点 ─ UA を送らないと bot 対策で 403 を返すサーバがあること、404 だけでなく
@@ -1993,8 +1993,8 @@ EOF
 - [ ] **Step 1: 法文を複製する**
 
 ```bash
-cp /Users/yet2come/Projects/iki-keikaku/LICENSE LICENSE
-cp /Users/yet2come/Projects/iki-keikaku/LICENSE-CODE LICENSE-CODE
+cp ../iki-keikaku/LICENSE LICENSE
+cp ../iki-keikaku/LICENSE-CODE LICENSE-CODE
 grep -n "Copyright\|20[0-9][0-9]" LICENSE-CODE | head -3
 ```
 
@@ -2437,7 +2437,7 @@ git add -A
 土台を読む:
 
 ```bash
-grep -n '^#\+ ' /Users/yet2come/Projects/iki-keikaku/SETUP.md
+grep -n '^#\+ ' ../iki-keikaku/SETUP.md
 ```
 
 iki-keikaku 固有の節（`plans.yml` の運用、OGP生成の playwright、分野別ページの
@@ -2461,7 +2461,7 @@ iki-keikaku 固有の節（`plans.yml` の運用、OGP生成の playwright、分
 
 ```bash
 mkdir -p about/license
-cp /Users/yet2come/Projects/iki-keikaku/about/license/index.html about/license/index.html
+cp ../iki-keikaku/about/license/index.html about/license/index.html
 ```
 
 土台からの変更点は次のとおり。**マークアップと CSS は触らず、本文と
