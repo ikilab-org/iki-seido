@@ -56,10 +56,13 @@ jobs:
               'URLの移設なら data/ の出典と tools/view-model.mjs の SOURCES を、',
               'ページ構造の変更なら scripts/parse_reiki.py の想定を確認してください。',
             ].join('\n')
+            // cron は JST 月曜 6:00（UTC 日曜 21:00）に回る。UTC のまま日付を出すと
+            // 日曜の日付になり、実行日と1日ずれるので JST に直してから切り出す
+            const jst = new Date(Date.now() + 9 * 60 * 60 * 1000).toISOString().slice(0, 10)
             await github.rest.issues.create({
               owner: context.repo.owner,
               repo: context.repo.repo,
-              title: `例規ページの失効を検知（${new Date().toISOString().slice(0, 10)}）`,
+              title: `例規ページの失効を検知（${jst}）`,
               body,
               labels: ['linkcheck'],
             })
